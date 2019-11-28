@@ -10,19 +10,42 @@ Reference:
 4. [https://blog.csdn.net/Cocaine_bai/article/details/80749588](https://blog.csdn.net/Cocaine_bai/article/details/80749588)
 5. [https://blog.csdn.net/Cocaine_bai/article/details/80758636](https://blog.csdn.net/Cocaine_bai/article/details/80758636)
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+## I. Background
 
-# Header 1
+1. Empolyee attritioin analysis
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+2. Data source: kaggle
 
-## Header 2
+3. Variable
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+satisfaction: Employee satisfaction level
+evaluation: Last evaluation
+project: Number of projects
+hours: Average monthly hours
+years: Time spent at the company
+accident: Whether they have had a work accident
+promotion: Whether they have had a promotion in the last 5 years
+sales: Department
+salary: Salary
+left: Whether the employee has left
 
-### Header 3
+4. Objects and measurement
+
+## II. Data Analysis
+
+Libraries
+
+```
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(gmodels)
+```
+
+### 1. Import Data and view
+
+![satisfaction](./images/satisfaction.jpg)
+
 
 ```js
 // Javascript code with syntax highlighting.
