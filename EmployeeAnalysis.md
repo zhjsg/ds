@@ -2,11 +2,10 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+Reference:
 
-[Link to another page](./another-page.html).
-
-There should be whitespace between paragraphs.
+1. [https://chf2012.github.io/2017/01/30/数据分析/20_数据分析/专题分析/优秀员工离职原因分析与预测/](https://chf2012.github.io/2017/01/30/数据分析/20_数据分析/专题分析/优秀员工离职原因分析与预测/).
+2. [Reference 2](./)
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
