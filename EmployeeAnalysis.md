@@ -18,6 +18,7 @@ Reference:
 
 3. Variable
 
+```
 satisfaction: Employee satisfaction level
 evaluation: Last evaluation
 project: Number of projects
@@ -28,6 +29,7 @@ promotion: Whether they have had a promotion in the last 5 years
 sales: Department
 salary: Salary
 left: Whether the employee has left
+```
 
 4. Objects and measurement
 
