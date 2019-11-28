@@ -44,7 +44,7 @@ library(gmodels)
 
 ### 1. Import Data and view
 
-![satisfaction](./images/satisfaction.jpg)
+![satisfaction](./images/satisfaction.png)
 
 
 ```js
