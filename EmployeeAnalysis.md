@@ -16,6 +16,8 @@ Reference:
 
 1. Data source: kaggle
 
+1. Objects and measurement
+
 1. Variable
 
 ```
@@ -30,8 +32,6 @@ sales: Department
 salary: Salary
 left: Whether the employee has left
 ```
-
-1. Objects and measurement
 
 ## II. Data Analysis
 
