@@ -14,9 +14,9 @@ Reference:
 
 1. Empolyee attritioin analysis
 
-2. Data source: kaggle
+1. Data source: kaggle
 
-3. Variable
+1. Variable
 
 ```
 satisfaction: Employee satisfaction level
@@ -31,7 +31,7 @@ salary: Salary
 left: Whether the employee has left
 ```
 
-4. Objects and measurement
+1. Objects and measurement
 
 ## II. Data Analysis
 
