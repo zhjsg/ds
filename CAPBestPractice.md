@@ -2,6 +2,8 @@
 layout: default
 ---
 
+[BACK](./)
+
 Reference:
 
 1. [https://www.certifiedanalytics.org](https://www.certifiedanalytics.org)
@@ -36,15 +38,15 @@ Reference:
 
 1. Identify available problem solving approaches (methods)
 1. Select software tools
-1. Test approaches (methods)1
-1. Select approaches (methods) 1
+1. Test approaches (methods)
+1. Select approaches (methods)
 
 ## V Model Building
 
-1. Identify model structures1
+1. Identify model structures
 1. Run and evaluate the models
-1. Calibrate models and data1
-1. Integrate the models1
+1. Calibrate models and data
+1. Integrate the models
 1. Document and communicate findings (including assumptions, limitations, and constraints)
 
 ## VI Deployment
@@ -52,14 +54,14 @@ Reference:
 1. Perform business validation of the model
 1. Deliver report with findings
 1. Define model, usability, and system requirements for production
-1. Deliver production model/system1
+1. Deliver production model/system
 1. Support deployment
 
 ## VII Model Life Cycle Management
 
 1. Document initial structure
 1. Track model quality
-1. Recalibrate and maintain the model1
+1. Recalibrate and maintain the model
 1. Support training activities
 1. Evaluate the model’s effectiveness at solving the business problem
 
