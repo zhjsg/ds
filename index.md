@@ -8,6 +8,10 @@ layout: default
 
 * * *
 
+[CAP Best Practice](./CAPBestPractice.html)
+
+* * *
+
 [House pricing Analysis](./EmployeeAnalysis.html)
 
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
