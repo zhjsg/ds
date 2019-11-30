@@ -2,6 +2,8 @@
 layout: default
 ---
 
+[BACK](./)
+
 Reference:
 
 1. [https://chf2012.github.io/2017/01/30/数据分析/20_数据分析/专题分析/优秀员工离职原因分析与预测/](https://chf2012.github.io/2017/01/30/数据分析/20_数据分析/专题分析/优秀员工离职原因分析与预测/)
@@ -47,6 +49,9 @@ library(gmodels)
 ### 1. Import Data and view
 
 ![satisfaction](./images/satisfaction.png)
+
+
+
 
 
 ```js
