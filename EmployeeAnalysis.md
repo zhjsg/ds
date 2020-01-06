@@ -18,9 +18,11 @@ Reference:
 
 1. Data source: kaggle
 
-1. Objects and measurement
-(1.) Analyze what is the possible reasons the employee resign
-(2.) Build the predicting model and predict which excellent employee will be the next to resign
+1. Objects and measurement:
+```
+(1) Analyze what is the possible reasons the employee resign
+(2) Build the predicting model and predict which excellent employee will be the next to resign
+```
 
 1. Variables
 
@@ -87,9 +89,11 @@ summary(hr)
 
 ### 2. Based on assumption, choose the subset of excellent employees
 Excellent employee:
+```
 (1) evaludation >= 0.75
 (2) project >= 4
 (3) year >= 4
+```
 
 2.1 filter subset based on assumption
 
@@ -109,8 +113,10 @@ CrossTable(hr_good$left)
 ![hr_good_left](./images/hr_good_left.png)
 
 Conclusion:
+```
 (1) from overall left employees, excellent employee percentage = 1778/3571 = 50%
 (2) from excellent employees subset, the left percentage = 1778/2763 = 64%
+```
 
 2.3 view excellent employee subset
 
@@ -128,8 +134,10 @@ corrplot(hr_good_corr, method="circle", tl.col="black", title="Left and Satisfac
 ```
 ![satisfaction](./images/satisfaction.png)
 
-Conclusion: 
+Conclusion:
+```
 (1) Left has negative correlationship with satisfaction, and high correlated.
+```
 
 
 
@@ -140,7 +148,6 @@ Conclusion:
 
 
 
-![satisfaction](./images/satisfaction.png)
 
 ```js
 // Javascript code with syntax highlighting.
