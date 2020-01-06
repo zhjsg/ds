@@ -25,7 +25,6 @@ Reference:
 ```
 
 1. Variables
-
 ```
 satisfaction: employee satisfaction level
 evaluation: last evaluation
@@ -42,7 +41,6 @@ left: whether the employee has left
 ## II. Data Analysis
 
 Libraries
-
 ```
 library(readr)
 library(dplyr)
@@ -53,7 +51,6 @@ library(gmodels)
 ### 1. Import Data and view
 
 1.1 Import data
-
 ```
 hr <- read_csv("HR_comma_sep.csv")
 hr <- tbl_df(hr)
@@ -63,20 +60,17 @@ str(hr)
 ![view_hr_file](./images/view_hr_file.png)
 
 1.2 Rename variables
-
 ```
 colnames(hr) <- c("satisfaction", "evaluation", "project", "hours", "years", "accident", "left", "promotion", "sales", "salary")
 ```
 
 1.3 Factor
-
 ```
 hr$sales <- factor(hr$sales)
 hr$salary <- factor(hr$salary, levels=c("low", "medium", "high"))
 ```
 
 1.4 View data
-
 ```
 sum(is.na(hr))
 ```
@@ -96,7 +90,6 @@ Excellent employee:
 ```
 
 2.1 filter subset based on assumption
-
 ```
 hr_good <- filter(hr, evaluation>=0.75 & years>=4 & project>=4)
 ```
@@ -119,14 +112,12 @@ Conclusion:
 ```
 
 2.3 view excellent employee subset
-
 ```
 summary(hr_good)
 ```
 ![view_hr_good_summary](./images/view_hr_good_summary.png)
 
 2.4 View the correlationship among the variables in excellent employees subset
-
 ```
 library("corrplot")
 hr_good_corr <- select(hr, -sales, -salary) %>% cor()
@@ -147,7 +138,7 @@ Conclusion:
 
 
 
-
+* * *
 
 ```js
 // Javascript code with syntax highlighting.
