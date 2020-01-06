@@ -19,10 +19,10 @@ Reference:
 1. Data source: kaggle
 
 1. Objects and measurement
-(1) Analyze what is the possible reasons the employee resign
-(2) Build the predicting model and predict which excellent employee will be the next to resign
+(1.) Analyze what is the possible reasons the employee resign
+(2.) Build the predicting model and predict which excellent employee will be the next to resign
 
-1. Variable
+1. Variables
 
 ```
 satisfaction: employee satisfaction level
