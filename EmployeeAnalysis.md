@@ -14,25 +14,27 @@ Reference:
 
 ## I. Background
 
-1. Empolyee attritioin analysis
+1. Plenty of excellent and experienced employee resign ahead of expected.
 
 1. Data source: kaggle
 
 1. Objects and measurement
+(1) Analyze what is the possible reasons the employee resign
+(2) Build the predicting model and predict which excellent employee will be the next to resign
 
 1. Variable
 
 ```
-satisfaction: Employee satisfaction level
-evaluation: Last evaluation
-project: Number of projects
-hours: Average monthly hours
-years: Time spent at the company
-accident: Whether they have had a work accident
-promotion: Whether they have had a promotion in the last 5 years
-sales: Department
-salary: Salary
-left: Whether the employee has left
+satisfaction: employee satisfaction level
+evaluation: last evaluation
+project: number of projects
+hours: average monthly hours
+years: time spent at the company
+accident: whether they have had a work accident
+promotion: whether they have had a promotion in the last 5 years
+sales: department
+salary: salary
+left: whether the employee has left
 ```
 
 ## II. Data Analysis
@@ -48,11 +50,97 @@ library(gmodels)
 
 ### 1. Import Data and view
 
+1.1 Import data
+
+```
+hr <- read_csv("HR_comma_sep.csv")
+hr <- tbl_df(hr)
+View(hr)
+str(hr)
+```
+![view_hr_file](./images/view_hr_file.png)
+
+1.2 Rename variables
+
+```
+colnames(hr) <- c("satisfaction", "evaluation", "project", "hours", "years", "accident", "left", "promotion", "sales", "salary")
+```
+
+1.3 Factor
+
+```
+hr$sales <- factor(hr$sales)
+hr$salary <- factor(hr$salary, levels=c("low", "medium", "high"))
+```
+
+1.4 View data
+
+```
+sum(is.na(hr))
+```
+#[1] 0
+
+```
+summary(hr)
+```
+![view_hr_summary](./images/view_hr_summary.png)
+
+### 2. Based on assumption, choose the subset of excellent employees
+Excellent employee:
+(1) evaludation >= 0.75
+(2) project >= 4
+(3) year >= 4
+
+2.1 filter subset based on assumption
+
+```
+hr_good <- filter(hr, evaluation>=0.75 & years>=4 & project>=4)
+```
+
+2.2 Compare left employee from subset with overall
+```
+CrossTable(hr$left)
+```
+![hr_left](./images/hr_left.png)
+
+```
+CrossTable(hr_good$left)
+```
+![hr_good_left](./images/hr_good_left.png)
+
+Conclusion:
+(1) from overall left employees, excellent employee percentage = 1778/3571 = 50%
+(2) from excellent employees subset, the left percentage = 1778/2763 = 64%
+
+2.3 view excellent employee subset
+
+```
+summary(hr_good)
+```
+![view_hr_good_summary](./images/view_hr_good_summary.png)
+
+2.4 View the correlationship among the variables in excellent employees subset
+
+```
+library("corrplot")
+hr_good_corr <- select(hr, -sales, -salary) %>% cor()
+corrplot(hr_good_corr, method="circle", tl.col="black", title="Left and Satisfaction", mar=c(1,1,3,1))
+```
 ![satisfaction](./images/satisfaction.png)
 
+Conclusion: 
+(1) Left has negative correlationship with satisfaction, and high correlated.
 
 
 
+
+
+
+
+
+
+
+![satisfaction](./images/satisfaction.png)
 
 ```js
 // Javascript code with syntax highlighting.
