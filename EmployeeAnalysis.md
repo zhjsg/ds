@@ -50,7 +50,7 @@ library(gmodels)
 
 ### 1. Import Data and view
 
-1.1 Import data
+#### 1.1 Import data
 ```
 hr <- read_csv("HR_comma_sep.csv")
 hr <- tbl_df(hr)
@@ -59,18 +59,18 @@ str(hr)
 ```
 ![view_hr_file](./images/view_hr_file.png)
 
-1.2 Rename variables
+#### 1.2 Rename variables
 ```
 colnames(hr) <- c("satisfaction", "evaluation", "project", "hours", "years", "accident", "left", "promotion", "sales", "salary")
 ```
 
-1.3 Factor
+#### 1.3 Factor
 ```
 hr$sales <- factor(hr$sales)
 hr$salary <- factor(hr$salary, levels=c("low", "medium", "high"))
 ```
 
-1.4 View data
+#### 1.4 View data
 ```
 sum(is.na(hr))
 ```
@@ -89,12 +89,12 @@ Excellent employee:
 (3) year >= 4
 ```
 
-2.1 filter subset based on assumption
+#### 2.1 filter subset based on assumption
 ```
 hr_good <- filter(hr, evaluation>=0.75 & years>=4 & project>=4)
 ```
 
-2.2 Compare left employee from subset with overall
+#### 2.2 Compare left employee from subset with overall
 ```
 CrossTable(hr$left)
 ```
@@ -111,13 +111,13 @@ Conclusion:
 (2) from excellent employees subset, the left percentage = 1778/2763 = 64%
 ```
 
-2.3 view excellent employee subset
+#### 2.3 view excellent employee subset
 ```
 summary(hr_good)
 ```
 ![view_hr_good_summary](./images/view_hr_good_summary.png)
 
-2.4 View the correlationship among the variables in excellent employees subset
+#### 2.4 View the correlationship among the variables in excellent employees subset
 ```
 library("corrplot")
 hr_good_corr <- select(hr, -sales, -salary) %>% cor()
@@ -131,7 +131,7 @@ Conclusion:
 ```
 ### 3. View the relationship among employee left, satisfaction and other variables 
 
-3.1 View satisfaction distribution
+#### 3.1 View satisfaction distribution
 ```
 library("corrplot")
 hr_good$left <- factor(hr_good$left, levels=c(0,1), labels=c("stay", "left"))
@@ -139,7 +139,7 @@ ggplot(hr_good, aes(satisfaction, fill=left)) + geom_histogram(position="dodge")
 ```
 ![satisfaction_distribution](./images/satisfaction_distribution.png)
 
-3.2 View the relationship among salary, working hours, satisfaction and left
+#### 3.2 View the relationship among salary, working hours, satisfaction and left
 ```
 ggplot(hr_good, aes(salary, hours, alpha=satisfaction, color=left))+geom_jitter() + theme3 +labs(title=paste("Relationship among salary, working hours, satisfaction and left"))
 ```
@@ -151,7 +151,7 @@ Conclusion:
 (2)
 (3)
 ```
-3.3 View the relationship among promotion, evaluation and left
+#### 3.3 View the relationship among promotion, evaluation and left
 ```
 ggplot(hr_good, aes(promotion, evaluation, color=left))+geom_jitter()+theme3+scale_x_discrete(limits=c(0,1))+labs(title=paste("Relationship among promotion, evaluation and left"))
 ```
@@ -161,7 +161,7 @@ Conclusion:
 ```
 (1)
 ```
-3.4 View the relationship among working years, satisfaction and left
+#### 3.4 View the relationship among working years, satisfaction and left
 ```
 ggplot(hr_good, aes(years, satisfaction, color=left))+geom_jitter()+scale_x_discrete(limits=c(4,5,6,7,8,9,10))+theme3+labs(title=paste("Relationship among working years, satisfaction and left"))
 ```
@@ -173,7 +173,7 @@ Conclusion:
 (2)
 (3)
 ```
-3.5 View the relationship among department, projects and left
+#### 3.5 View the relationship among department, projects and left
 ```
 ggplot(hr_good, aes(sales, fill=left))+geom_bar(position="fill")+facet_wrap(~factor(project), ncol=1) + theme3 + theme(axis.text.x=element_text(angle=270))+labs(x="departments", y="number project", title="Relationship among departments, projects and left")
 ```
@@ -183,7 +183,7 @@ Conclusion:
 ```
 (1)
 ```
-3.6 View the relationship between department and left
+#### 3.6 View the relationship between department and left
 ```
 ggplot(hr_good, aes(sales, fill=left))+geom_bar(position="dodge")+coord_flip()+scale_x_discrete(limits=c("management", "RandD", "hr", "accounting", "marketing", "product_mng", "IT", "support", "technical", "sales"))+labs(x="departments", title="Relationship between departments and left")
 ```
@@ -206,7 +206,7 @@ hr_good_test <- hr_good[-train, ]
 ```
 ### 1. Logistic regression
 
-1.1 Build logistic regresson and verify
+#### 1.1 Build logistic regresson and verify
 ```
 library("caTools")
 ctrl <- trainControl(method="cv", number=5)
@@ -216,7 +216,7 @@ confusionMatrix(hr_good_test$left, logit.pred)
 ```
 ![Logistic_matrix](./images/Logistic_matrix.png)
 
-1.2 Evaluate model, draw ROC/AUC
+#### 1.2 Evaluate model, draw ROC/AUC
 ```
 library(“pROC”)
 roc(as.numeric(hr_good_test$left), as.numeric(logit.pred), plot=TRUE, print.thres=TRUE, print.auc=TRUE, col="black")
@@ -226,7 +226,7 @@ roc(as.numeric(hr_good_test$left), as.numeric(logit.pred), plot=TRUE, print.thre
 ![Logistic_roc](./images/Logistic_roc.png)
 
 ### 2. Decision Tree
-2.1 Build decision tree
+#### 2.1 Build decision tree
 ```
 library("rpart")
 library("partykit")
@@ -253,7 +253,7 @@ confusionMatrix(hr_good_test$left, dtree.pruned.pred)
 ```
 ![Decisiontree_matrix](./images/Decisiontree_matrix.png)
 
-2.2 Evaluate model, draw ROC/AUC
+#### 2.2 Evaluate model, draw ROC/AUC
 ```
 roc(as.numeric(hr_good_test$left), as.numeric(dtree.pruned.pred), plot=TRUE, print.thres=TRUE, print.auc=TRUE, col="blue")
 ```
@@ -262,7 +262,7 @@ roc(as.numeric(hr_good_test$left), as.numeric(dtree.pruned.pred), plot=TRUE, pri
 ![Decisiontree_roc](./images/Decisiontree_roc.png)
 
 ### 3. Random forest
-3.1 Build random forest
+#### 3.1 Build random forest
 ```
 library("randomForest")
 set.seed(0002)
@@ -282,7 +282,7 @@ confusionMatrix(hr_good_test$left, forest.pred)
 ```
 ![Randomforest_matrix](./images/Randomforest_matrix.png)
 
-3.2 Evaluate model, draw ROC/AUC
+#### 3.2 Evaluate model, draw ROC/AUC
 ```
 roc(as.numeric(hr_good_test$left), as.numeric(forest.pred), plot=TRUE, print.thres=TRUE, print.auc=T, col="green")
 ```
@@ -291,7 +291,7 @@ roc(as.numeric(hr_good_test$left), as.numeric(forest.pred), plot=TRUE, print.thr
 ![Randomforest_roc](./images/Randomforest_roc.png)
 
 ### 4. SVM
-4.1 Build SVM
+#### 4.1 Build SVM
 ```
 library("e1071")
 set.seed(0003)
@@ -301,7 +301,7 @@ confusionMatrix(na.omit(hr_good_test)$left, svm.pred)
 ```
 ![svm_matrix](./images/svm_matrix.png)
 
-4.2 Evaluate model, draw ROC/AUC
+#### 4.2 Evaluate model, draw ROC/AUC
 ```
 roc(as.numeric(na.omit(hr_good_test)$left), as.numeric(svm.pred), plot=T, print.thres=T, print.auc=T, col="orange")
 ```
@@ -330,7 +330,7 @@ importance(forest, type=2)
 ```
 ![apply_model_importance](./images/apply_model_importance.png)
 
-6.1 Remove unimportant factors, rebuild the model
+#### 6.1 Remove unimportant factors, rebuild the model
 ```
 forest2 <- randomForest(left~.-promotion-accident-salary-sales, hr_good, na.action=na.roughfix, importance=TRUE)
 importance(forest2, type=2)
@@ -343,7 +343,7 @@ confusionMatrix(hr_good_test$left, forest2.pred, positive="left")
 ```
 ![rebuild_model_matrix](./images/rebuild_model_matrix.png)
 
-6.2 Evaluate model, draw ROC/AUC
+#### 6.2 Evaluate model, draw ROC/AUC
 ```
 roc(as.numeric(hr_good_test$left), as.numeric(forest2.pred), plot=TRUE, print.thres=T, print.auc=T, main="Random Forest", col="green")
 ```
