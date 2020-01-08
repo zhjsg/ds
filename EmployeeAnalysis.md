@@ -138,11 +138,13 @@ hr_good$left <- factor(hr_good$left, levels=c(0,1), labels=c("stay", "left"))
 ggplot(hr_good, aes(satisfaction, fill=left)) + geom_histogram(position="dodge") + scale_x_continuous(breaks=c(0.1, 0.13, 0.25, 0.50, 0.73, 0.75, 0.92, 1.00))+theme(axis.text.x=element_text(angle=90))+labs(title="satisfaction distribution")
 ```
 ![satisfaction_distribution](./images/satisfaction_distribution.png)
+
 3.2 View the relationship among salary, working hours, satisfaction and left
 ```
 ggplot(hr_good, aes(salary, hours, alpha=satisfaction, color=left))+geom_jitter() + theme3 +labs(title=paste("Relationship among salary, working hours, satisfaction and left"))
 ```
 ![Salary_hours_satisfaction_left](./images/Salary_hours_satisfaction_left.png)
+
 Conclusion:
 ```
 (1)
@@ -154,6 +156,7 @@ Conclusion:
 ggplot(hr_good, aes(promotion, evaluation, color=left))+geom_jitter()+theme3+scale_x_discrete(limits=c(0,1))+labs(title=paste("Relationship among promotion, evaluation and left"))
 ```
 ![Promotion_evaluation_left](./images/Promotion_evaluation_left.png)
+
 Conclusion:
 ```
 (1)
@@ -163,6 +166,7 @@ Conclusion:
 ggplot(hr_good, aes(years, satisfaction, color=left))+geom_jitter()+scale_x_discrete(limits=c(4,5,6,7,8,9,10))+theme3+labs(title=paste("Relationship among working years, satisfaction and left"))
 ```
 ![Workingyears_satisfaction_left](./images/Workingyears_satisfaction_left.png)
+
 Conclusion:
 ```
 (1)
@@ -174,6 +178,7 @@ Conclusion:
 ggplot(hr_good, aes(sales, fill=left))+geom_bar(position="fill")+facet_wrap(~factor(project), ncol=1) + theme3 + theme(axis.text.x=element_text(angle=270))+labs(x="departments", y="number project", title="Relationship among departments, projects and left")
 ```
 ![Departments_projects_left](./images/Departments_projects_left.png)
+
 Conclusion:
 ```
 (1)
@@ -183,6 +188,7 @@ Conclusion:
 ggplot(hr_good, aes(sales, fill=left))+geom_bar(position="dodge")+coord_flip()+scale_x_discrete(limits=c("management", "RandD", "hr", "accounting", "marketing", "product_mng", "IT", "support", "technical", "sales"))+labs(x="departments", title="Relationship between departments and left")
 ```
 ![Departments_left](./images/Departments_left.png)
+
 Conclusion:
 ```
 (1)
@@ -216,6 +222,7 @@ library(“pROC”)
 roc(as.numeric(hr_good_test$left), as.numeric(logit.pred), plot=TRUE, print.thres=TRUE, print.auc=TRUE, col="black")
 ```
 ![Logistic_call_roc](./images/Logistic_call_roc.png)
+
 ![Logistic_roc](./images/Logistic_roc.png)
 
 ### 2. Decision Tree
@@ -228,25 +235,30 @@ dtree <- rpart(left~., hr_good_train, method="class", parms=list(split="informat
 dtree$cptable
 ```
 ![Decisiontree_build](./images/Decisiontree_build.png)
+
 ```
 plotcp(dtree)
 ```
 ![Decisiontree_plotcp](./images/Decisiontree_plotcp.png)
+
 ```
 dtree.pruned <- prune(dtree, cp=0.01)
 plot(as.party(dtree.pruned), main="Decision Tree")
 ```
 ![Decisiontree_plot](./images/Decisiontree_plot.png)
+
 ```
 dtree.pruned.pred <- predict(dtree.pruned, hr_good_test, type="class")
 confusionMatrix(hr_good_test$left, dtree.pruned.pred)
 ```
 ![Decisiontree_matrix](./images/Decisiontree_matrix.png)
+
 2.2 Evaluate model, draw ROC/AUC
 ```
 roc(as.numeric(hr_good_test$left), as.numeric(dtree.pruned.pred), plot=TRUE, print.thres=TRUE, print.auc=TRUE, col="blue")
 ```
 ![Decisiontree_call_roc](./images/Decisiontree_call_roc.png)
+
 ![Decisiontree_roc](./images/Decisiontree_roc.png)
 
 ### 3. Random forest
@@ -258,20 +270,24 @@ forest <- randomForest(left~., hr_good_train, importance=TRUE, na.action=na.roug
 forest
 ```
 ![Randomforest_call](./images/Randomforest_call.png)
+
 ```
 importance(forest, type=2)
 ```
 ![Randomforest_importance](./images/Randomforest_importance.png)
+
 ```
 forest.pred <- predict(forest, hr_good_test)
 confusionMatrix(hr_good_test$left, forest.pred)
 ```
 ![Randomforest_matrix](./images/Randomforest_matrix.png)
+
 3.2 Evaluate model, draw ROC/AUC
 ```
 roc(as.numeric(hr_good_test$left), as.numeric(forest.pred), plot=TRUE, print.thres=TRUE, print.auc=T, col="green")
 ```
 ![Randomforest_call_roc](./images/Randomforest_call_roc.png)
+
 ![Randomforest_roc](./images/Randomforest_roc.png)
 
 ### 4. SVM
@@ -284,11 +300,13 @@ svm.pred <- predict(svm, na.omit(hr_good_test))
 confusionMatrix(na.omit(hr_good_test)$left, svm.pred)
 ```
 ![svm_matrix](./images/svm_matrix.png)
+
 4.2 Evaluate model, draw ROC/AUC
 ```
 roc(as.numeric(na.omit(hr_good_test)$left), as.numeric(svm.pred), plot=T, print.thres=T, print.auc=T, col="orange")
 ```
 ![svm_call_roc](./images/svm_call_roc.png)
+
 ![svm_roc](./images/svm_roc.png)
 
 ### 5. Compare models, choose the most accurate model
@@ -299,7 +317,9 @@ roc(as.numeric(hr_good_test$left), as.numeric(forest.pred), plot=TRUE, col="gree
 roc(as.numeric(hr_good_test$left), as.numeric(svm.pred), plot=TRUE, col="orange", add=T)
 ```
 ![compare_call](./images/compare_call.png)
+
 ![compare_results](./images/compare_results.png)
+
 Conclusion:
 ```
 (1)
@@ -309,22 +329,26 @@ Conclusion:
 importance(forest, type=2)
 ```
 ![apply_model_importance](./images/apply_model_importance.png)
+
 6.1 Remove unimportant factors, rebuild the model
 ```
 forest2 <- randomForest(left~.-promotion-accident-salary-sales, hr_good, na.action=na.roughfix, importance=TRUE)
 importance(forest2, type=2)
 ```
 ![rebuild_model_importance](./images/rebuild_model_importance.png)
+
 ```
 forest2.pred <- predict(forest2, hr_good_test)
 confusionMatrix(hr_good_test$left, forest2.pred, positive="left")
 ```
 ![rebuild_model_matrix](./images/rebuild_model_matrix.png)
+
 6.2 Evaluate model, draw ROC/AUC
 ```
 roc(as.numeric(hr_good_test$left), as.numeric(forest2.pred), plot=TRUE, print.thres=T, print.auc=T, main="Random Forest", col="green")
 ```
 ![rebuild_model_call_roc](./images/rebuild_model_call_roc.png)
+
 ![rebuild_model_roc](./images/rebuild_model_roc.png)
 
 ### 7. Conclusion
