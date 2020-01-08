@@ -129,115 +129,183 @@ Conclusion:
 ```
 (1) Left has negative correlationship with satisfaction, and high correlated.
 ```
+### 3. View the relationship among employee left, satisfaction and other variables 
 
+3.1 View satisfaction distribution
+```
 
+```
+![xxx](./images/xxx.png)
+3.2 View the relationship among salary, working hours, satisfaction and left
+```
 
+```
+![xxx](./images/xxx.png)
+Conclusion:
+```
+(1)
+(2)
+(3)
+```
+3.3 View the relationship among promotion, satisfaction and left
+```
 
+```
+![xxx](./images/xxx.png)
+Conclusion:
+```
+(1)
+```
+3.4 View the relationship among working years, satisfaction and left
+```
 
+```
+![xxx](./images/xxx.png)
+Conclusion:
+```
+(1)
+(2)
+(3)
+```
+3.5 View the relationship among department, projects and left
+```
 
+```
+![xxx](./images/xxx.png)
+Conclusion:
+```
+(1)
+```
+3.6 View the relationship between department and left
+```
 
+```
+![xxx](./images/xxx.png)
+Conclusion:
+```
+(1)
+```
+
+## III. Build predicting model
+Data Partition
+```
+
+```
+### 1. Logistic regression
+
+1.1 Build logistic regresson and verify
+```
+
+```
+Confusion Matrix and Statistics
+![xxx](./images/xxx.png)
+
+1.2 Evaluate model, draw ROC/AUC
+```
+
+```
+![xxx](./images/xxx.png)
+
+### 2. Decision Tree
+2.1 Build decision tree
+```
+
+```
+![xxx](./images/xxx.png)
+```
+
+```
+![xxx](./images/xxx.png)
+```
+
+```
+![xxx](./images/xxx.png)
+```
+
+```
+Confusion Matrix and Statistics
+![xxx](./images/xxx.png)
+2.2 Evaluate model, draw ROC/AUC
+```
+
+```
+![xxx](./images/xxx.png)
+
+### 3. Random forest
+3.1 Build random forest
+```
+
+```
+![xxx](./images/xxx.png)
+```
+
+```
+![xxx](./images/xxx.png)
+```
+
+```
+![xxx](./images/xxx.png)
+3.2 Evaluate model, draw ROC/AUC
+```
+
+```
+![xxx](./images/xxx.png)
+
+### 4. SVM
+4.1 Build SVM
+```
+
+```
+Confusion Matrix and Statistics
+![xxx](./images/xxx.png)
+4.2 Evaluate model, draw ROC/AUC
+```
+
+```
+![xxx](./images/xxx.png)
+
+### 5. Compare models, choose the most accurate model
+```
+
+```
+![xxx](./images/xxx.png)
+Conclusion:
+```
+
+```
+### 6. Apply model
+```
+
+```
+MeanDecreaseGini
+![xxx](./images/xxx.png)
+6.1 Remove unimportant factors, rebuild the model
+```
+
+```
+![xxx](./images/xxx.png)
+```
+
+```
+Confusion Matrix and Statistics
+![xxx](./images/xxx.png)
+6.2 Evaluate model, draw ROC/AUC
+```
+
+```
+![xxx](./images/xxx.png)
+
+### 7. Conclusion
+```
+1.
+2.
+3.
+```
 
 
 * * *
+JS
+<script>document.write(5 + 6);</script>
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
 
 [BACK](./)
