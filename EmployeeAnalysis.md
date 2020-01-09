@@ -139,6 +139,10 @@ ggplot(hr_good, aes(satisfaction, fill=left)) + geom_histogram(position="dodge")
 ```
 ![satisfaction_distribution](./images/satisfaction_distribution.png)
 
+```
+(1) The number of resign employees whose satisfaction falls in [0.1m 0.13] and [0.73, 0.92] are large.
+```
+
 #### 3.2 View the relationship among salary, working hours, satisfaction and left
 ```
 ggplot(hr_good, aes(salary, hours, alpha=satisfaction, color=left))+geom_jitter() + theme3 +labs(title=paste("Relationship among salary, working hours, satisfaction and left"))
@@ -147,9 +151,8 @@ ggplot(hr_good, aes(salary, hours, alpha=satisfaction, color=left))+geom_jitter(
 
 Conclusion:
 ```
-(1)
-(2)
-(3)
+(1) For staffs who pay is low or medium and who work long hours, most of them left.
+(2) For staffs who work super long hours, their satisfaction are low and the majority of them have left.
 ```
 #### 3.3 View the relationship among promotion, evaluation and left
 ```
@@ -159,7 +162,8 @@ ggplot(hr_good, aes(promotion, evaluation, color=left))+geom_jitter()+theme3+sca
 
 Conclusion:
 ```
-(1)
+(1) Most of the staffs with high evaluation were not promoted.
+(2) Most of the left staffs were not promoted.
 ```
 #### 3.4 View the relationship among working years, satisfaction and left
 ```
