@@ -173,9 +173,9 @@ ggplot(hr_good, aes(years, satisfaction, color=left))+geom_jitter()+scale_x_disc
 
 Conclusion:
 ```
-(1)
-(2)
-(3)
+(1) With low satisfaction level (satisfaction < 0.1), most of staffs who work 4 or 5 years left.
+(2) With high satisfaction level, most of staffs who work 5 or 6 years left.
+(3) None of staffs who works more than 7 years left.
 ```
 #### 3.5 View the relationship among department, projects and left
 ```
@@ -185,7 +185,7 @@ ggplot(hr_good, aes(sales, fill=left))+geom_bar(position="fill")+facet_wrap(~fac
 
 Conclusion:
 ```
-(1)
+(1) The staff left rate is high for those who work for more than 6 project, no matter which department he or she work for.
 ```
 #### 3.6 View the relationship between department and left
 ```
@@ -195,7 +195,7 @@ ggplot(hr_good, aes(sales, fill=left))+geom_bar(position="dodge")+coord_flip()+s
 
 Conclusion:
 ```
-(1)
+(1) Except for management department, the number of left staffs is higher than that of stay staffs in other departments.
 ```
 
 ## III. Build predicting model
@@ -326,7 +326,7 @@ roc(as.numeric(hr_good_test$left), as.numeric(svm.pred), plot=TRUE, col="orange"
 
 Conclusion:
 ```
-(1)
+(1) Random forest model is most accurate one compare to other models, choose it as predicting model.
 ```
 ### 6. Apply model
 ```
@@ -357,15 +357,11 @@ roc(as.numeric(hr_good_test$left), as.numeric(forest2.pred), plot=TRUE, print.th
 
 ### 7. Conclusion
 ```
-1.
-2.
-3.
+1. In the adjusted random forest model, the accuracy of left staff is as high as 99.5%; The left employees are predicted as accurate as 99.5%; For prediected left employees, their resign rate is 99.8% in real.
+2. Removing unimportant variables (e.g. promotion, accident, sales, salary) will not impact the predicting model.
+3. The three major factors that will cause staffs left are satisfaction, hours and years.
 ```
 
 * * *
-
-JS
-<script>document.write(5 + 6);</script>
-
 
 [BACK](./)
