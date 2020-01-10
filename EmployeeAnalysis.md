@@ -14,7 +14,7 @@ Reference:
 
 ## I. Background
 
-1. Plenty of excellent and experienced employee resign ahead of expected.
+1. Plenty of excellent and experienced employee have resigned earlier than expected.
 
 1. Data source: kaggle
 
