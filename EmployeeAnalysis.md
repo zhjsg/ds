@@ -14,7 +14,7 @@ Reference:
 
 ## I. Background
 
-1. Plenty of excellent and experienced employee have resigned earlier than expected.
+1. Plenty of excellent and experienced employees have resigned earlier than expected.
 
 1. Data source: kaggle
 
@@ -361,7 +361,5 @@ roc(as.numeric(hr_good_test$left), as.numeric(forest2.pred), plot=TRUE, print.th
 2. Removing unimportant variables (e.g. promotion, accident, sales, salary) will not impact the predicting model.
 3. The three major factors that will cause staffs left are satisfaction, hours and years.
 ```
-
-* * *
 
 [BACK](./)
