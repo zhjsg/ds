@@ -140,7 +140,7 @@ ggplot(hr_good, aes(satisfaction, fill=left)) + geom_histogram(position="dodge")
 ![satisfaction_distribution](./images/satisfaction_distribution.png)
 
 ```
-(1) The number of resign employees whose satisfaction falls in [0.1m 0.13] and [0.73, 0.92] are large.
+(1) The number of resign employees whose satisfaction falls in [0.1, 0.13] and [0.73, 0.92] are large.
 ```
 
 #### 3.2 View the relationship among salary, working hours, satisfaction and left
