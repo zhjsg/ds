@@ -14,7 +14,6 @@ Reference:
 
 1. Data source: SG MOH
 
-1. Variables
 <table>
   <tr>
     <th>CASE ID</th> <th>SEX</th> <th>AGE</th> <th>NATIONALITY</th> <th>CONFIRMED DATE</th> <th>HOSPITAL</th>
@@ -299,6 +298,8 @@ Reference:
     <td>93</td> <td>MAN</td> <td>38</td> <td>Singapore Citizen</td> <td>2020.02.26</td> <td>Ng Teng Fong General Hospital</td>
   </tr>
 </table>
+
+1. Variables
 
 1. Objects and measurement:
 ```
