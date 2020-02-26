@@ -293,10 +293,10 @@ Reference:
     <td>91</td> <td></td> <td></td> <td></td> <td></td> <td></td>
   </tr>
   <tr>
-    <td>92</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td>92</td> <td>MAN</td> <td>47</td> <td>Singapore Citizen</td> <td>2020.02.26</td> <td>Sengkang General Hospital</td>
   </tr>
   <tr>
-    <td>93</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td>93</td> <td>MAN</td> <td>38</td> <td>Singapore Citizen</td> <td>2020.02.26</td> <td>Ng Teng Fong General Hospital</td>
   </tr>
 </table>
 
