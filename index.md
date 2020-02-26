@@ -12,7 +12,7 @@ layout: default
 
 * * *
 
-[House pricing Analysis](./EmployeeAnalysis.html)
+[COVID-19 SG Analysis](./COVID-19_SG.html)
 
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 
