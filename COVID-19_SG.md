@@ -287,10 +287,10 @@ Reference:
     <td>89</td> <td></td> <td></td> <td></td> <td></td> <td></td>
   </tr>
   <tr>
-    <td>90</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td>90</td> <td>WOMAN</td> <td>75</td> <td>Singapore Citizen</td> <td>2020.02.23</td> <td>National Centre for Infectious Diseases</td>
   </tr>
   <tr>
-    <td>91</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td>91</td> <td>WOMAN</td> <td>58</td> <td>Singapore Citizen</td> <td>2020.02.22</td> <td>National Centre for Infectious Diseases</td>
   </tr>
   <tr>
     <td>92</td> <td>MAN</td> <td>47</td> <td>Singapore Citizen</td> <td>2020.02.26</td> <td>Sengkang General Hospital</td>
