@@ -2,18 +2,7 @@
 layout: default
 ---
 
-[BACK](./)
-
-Reference:
-
-1. [https://www.moh.gov.sg/covid-19](https://www.moh.gov.sg/covid-19)
-
-## I. Background
-
-1. CORONAVIRUS DISEASE 2019
-
-1. Data source: SG MOH
-
+<style>
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -29,6 +18,19 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+</style>
+
+[BACK](./)
+
+Reference:
+
+1. [https://www.moh.gov.sg/covid-19](https://www.moh.gov.sg/covid-19)
+
+## I. Background
+
+1. CORONAVIRUS DISEASE 2019
+
+1. Data source: SG MOH
 
 <table>
   <tr>
