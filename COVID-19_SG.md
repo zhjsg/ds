@@ -306,6 +306,24 @@ Reference:
   <tr>
     <td>96</td> <td>MAN</td> <td>12</td> <td>Singapore Citizen</td> <td>2020.02.27</td> <td>KK Women’s and Children’s Hospital (KKH)</td>
   </tr>
+  <tr>
+    <td>97</td> <td>WOMAN</td> <td>44</td> <td>Singapore Permanent Resident</td> <td>2020.02.27</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>98</td> <td>MAN</td> <td>24</td> <td>Singapore Permanent Resident</td> <td>2020.02.28</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>99</td> <td>MAN</td> <td>27</td> <td>Singapore Citizen</td> <td>2020.02.28</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>100</td> <td>MAN</td> <td>20</td> <td>Malaysian national</td> <td>2020.02.28</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>101</td> <td>MAN</td> <td>61</td> <td>Singapore Citizen</td> <td>2020.02.29</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>102</td> <td>WOMAN</td> <td>41</td> <td>Filipino national</td> <td>2020.02.29</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
 </table>
 
 1. Variables
