@@ -350,6 +350,12 @@ Reference:
   <tr>
     <td>110</td> <td>MAN</td> <td>33</td> <td>Singapore Citizen</td> <td>2020.03.03</td> <td>National Centre for Infectious Diseases (NCID)</td>
   </tr>
+  <tr>
+    <td>111</td> <td>MAN</td> <td>43</td> <td>Singapore Permanent Resident</td> <td>2020.03.03</td> <td>National University Hospital (NUH)</td>
+  </tr>
+  <tr>
+    <td>112</td> <td>WOMAN</td> <td>62</td> <td>Singapore Citizen</td> <td>2020.03.04</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
 </table>
 
 1. Variables
