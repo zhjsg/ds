@@ -398,5 +398,7 @@ Three packages are of interest in R:
 2. ggraph for plotting using the grammar of graphic, and 
 3. networkD3 for interactivity.
 ```
+##### 1.2.1 igraph
+![COVID-19_igraph](./images/COVID-19/COVID-19_igraph.png)
 
 [BACK](./)
