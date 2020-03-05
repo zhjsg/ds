@@ -390,5 +390,13 @@ Reference:
 
 #### 1.1 Import data
 
+#### 1.2 Network Diagram
+```
+Network diagrams (or Graphs) show interconnections between a set of entities. Each entity is represented by a Node (or vertice). Connections between nodes are represented by links (or edges). 
+Three packages are of interest in R: 
+1. igraph for data preparation and plotting, 
+2. ggraph for plotting using the grammar of graphic, and 
+3. networkD3 for interactivity.
+```
 
 [BACK](./)
