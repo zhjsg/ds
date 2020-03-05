@@ -400,6 +400,7 @@ Three packages are of interest in R:
 ```
 ##### 1.2.1 igraph
 ![COVID-19_igraph](./images/COVID-19/COVID-19_igraph.png)
+```
 1. LCM: The Life Church and Missions Singapore
 2. GAG: The Grace Assembly of God
 3. YTH: Yong Thai Hang
@@ -407,5 +408,6 @@ Three packages are of interest in R:
 5. SAH: The Seletar Aerospace Heights construction site
 6. WTP: Wizlearn Technologies Pte Ltd
 7. SAFRA: SAFRA Jurong
+```
 
 [BACK](./)
