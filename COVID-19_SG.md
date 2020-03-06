@@ -372,6 +372,45 @@ Reference:
     <td>117</td> <td>WOMAN</td> <td>52</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>National Centre for Infectious Diseases (NCID)</td>
   </tr>
   <tr>
+    <td>118</td> <td>WOMAN</td> <td>33</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>National University Hospital (NUH)</td>
+  </tr>
+  <tr>
+    <td>119</td> <td>MAN</td> <td>55</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>Alexandra Hospital (AH)</td>
+  </tr>
+  <tr>
+    <td>120</td> <td>WOMAN</td> <td>62</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>121</td> <td>WOMAN</td> <td>54</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>122</td> <td>WOMAN</td> <td>64</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>123</td> <td>MAN</td> <td>47</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>Sengkang General Hospital (SKH)</td>
+  </tr>
+  <tr>
+    <td>124</td> <td>WOMAN</td> <td>37</td> <td>Singapore Permanent Resident</td> <td>2020.03.06</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>125</td> <td>WOMAN</td> <td>65</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>126</td> <td>MAN</td> <td>77</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>127</td> <td>WOMAN</td> <td>64</td> <td>Singapore Citizen</td> <td>2020.03.05</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>128</td> <td>MAN</td> <td>70</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>129</td> <td>WOMAN</td> <td>68</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>130</td> <td>MAN</td> <td>66</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
     <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
   </tr>
 </table>
