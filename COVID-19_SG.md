@@ -411,6 +411,66 @@ Reference:
     <td>130</td> <td>MAN</td> <td>66</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
   </tr>
   <tr>
+    <td>131</td> <td>MAN</td> <td>66</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>132</td> <td>WOMAN</td> <td>37</td> <td>Singapore Permanent Resident</td> <td>2020.03.06</td> <td>National University Hospital (NUH)</td>
+  </tr>
+  <tr>
+    <td>133</td> <td>WOMAN</td> <td>62</td> <td>Indonesian national</td> <td>2020.03.06</td> <td>National University Hospital (NUH)</td>
+  </tr>
+  <tr>
+    <td>134</td> <td>WOMAN</td> <td>56</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>135</td> <td>MAN</td> <td>40</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>Singapore General Hospital (SGH)</td>
+  </tr>
+  <tr>
+    <td>136</td> <td>MAN</td> <td>36</td> <td>Italian national</td> <td>2020.03.06</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>137</td> <td>MAN</td> <td>60</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>138</td> <td>MAN</td> <td>26</td> <td>Singapore Citizen</td> <td>2020.03.06</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>139</td> <td>MAN</td> <td>71</td> <td>Singapore Citizen</td> <td>2020.03.07</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>140</td> <td>WOMAN</td> <td>62</td> <td>Singapore Citizen</td> <td>2020.03.07</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>141</td> <td>MAN</td> <td>69</td> <td>Singapore Citizen</td> <td>2020.03.07</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>142</td> <td>MAN</td> <td>26</td> <td>Singapore Citizen</td> <td>2020.03.07</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>143</td> <td>MAN</td> <td>42</td> <td>Singapore Permanent Resident</td> <td>2020.03.07</td> <td>National University Hospital (NUH)</td>
+  </tr>
+  <tr>
+    <td>144</td> <td>WOMAN</td> <td>58</td> <td>Singapore Citizen</td> <td>2020.03.07</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>145</td> <td>WOMAN</td> <td>67</td> <td>Singapore Citizen</td> <td>2020.03.08</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>146</td> <td>WOMAN</td> <td>64</td> <td>Singapore Citizen</td> <td>2020.03.08</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>147</td> <td>MAN</td> <td>64</td> <td>Indonesian national</td> <td>2020.03.08</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>148</td> <td>WOMAN</td> <td>67</td> <td>Singapore Citizen</td> <td>2020.03.08</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>149</td> <td>MAN</td> <td>62</td> <td>Singapore Citizen</td> <td>2020.03.08</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>150</td> <td>WOMAN</td> <td>53</td> <td>Singapore Permanent Resident</td> <td>2020.03.08</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
     <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
   </tr>
 </table>
