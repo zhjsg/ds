@@ -471,11 +471,181 @@ Reference:
     <td>150</td> <td>WOMAN</td> <td>53</td> <td>Singapore Permanent Resident</td> <td>2020.03.08</td> <td>National Centre for Infectious Diseases (NCID)</td>
   </tr>
   <tr>
+    <td>151</td> <td>MAN</td> <td>51</td> <td>Singapore Citizen</td> <td>2020.03.08</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>152</td> <td>MAN</td> <td>65</td> <td>Indonesian national</td> <td>2020.03.08</td> <td>Singapore General Hospital (SGH)</td>
+  </tr>
+  <tr>
+    <td>153</td> <td>WOMAN</td> <td>65</td> <td>Singapore Citizen</td> <td>2020.03.08</td> <td>Singapore General Hospital (SGH)</td>
+  </tr>
+  <tr>
+    <td>154</td> <td>MAN</td> <td>52</td> <td>British national</td> <td>2020.03.09</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>155</td> <td>WOMAN</td> <td>47</td> <td>Malaysian national</td> <td>2020.03.09</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>156</td> <td>WOMAN</td> <td>50</td> <td>Singapore Permanent Resident</td> <td>2020.03.09</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>157</td> <td>WOMAN</td> <td>54</td> <td>Singapore Permanent Resident</td> <td>2020.03.09</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>158</td> <td>WOMAN</td> <td>53</td> <td>Singapore Citizen</td> <td>2020.03.09</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>159</td> <td>MAN</td> <td>59</td> <td>Singapore Citizen</td> <td>2020.03.09</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>160</td> <td>MAN</td> <td>5</td> <td>Singapore Citizen</td> <td>2020.03.09</td> <td>KK Women’s and Children’s Hospital (KKH)</td>
+  </tr>
+  <tr>
+    <td>161</td> <td>MAN</td> <td>73</td> <td>Singapore Citizen</td> <td>2020.03.09</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>162</td> <td>MAN</td> <td>28</td> <td>Singapore Citizen</td> <td>2020.03.09</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>163</td> <td>WOMAN</td> <td>27</td> <td>Singapore Citizen</td> <td>2020.03.09</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>164</td> <td>WOMAN</td> <td>57</td> <td>Singapore Permanent Resident</td> <td>2020.03.10</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>165</td> <td>MAN</td> <td>30</td> <td>Singapore Citizen</td> <td>2020.03.10</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>166</td> <td>WOMAN</td> <td>55</td> <td>Singapore Citizen</td> <td>2020.03.10</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>167</td> <td>WOMAN</td> <td>35</td> <td>Filipino national</td> <td>2020.03.10</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>168</td> <td>MAN</td> <td>47</td> <td>Singapore Citizen</td> <td>2020.03.10</td> <td>Sengkang General Hospital (SKH)</td>
+  </tr>
+  <tr>
+    <td>169</td> <td>MAN</td> <td>40</td> <td>Singapore Citizen</td> <td>2020.03.10</td> <td>Khoo Teck Puat Hospital (KTPH)</td>
+  </tr>
+  <tr>
+    <td>170</td> <td>WOMAN</td> <td>56</td> <td>Indonesian national</td> <td>2020.03.10</td> <td>Singapore General Hospital (SGH)</td>
+  </tr>
+  <tr>
+    <td>171</td> <td>MAN</td> <td>27</td> <td>Singapore Citizen</td> <td>2020.03.11</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>172</td> <td>WOMAN</td> <td>42</td> <td>Filipino national</td> <td>2020.03.11</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>173</td> <td>MAN</td> <td>31</td> <td>Singapore Citizen</td> <td>2020.03.11</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>174</td> <td>WOMAN</td> <td>67</td> <td>Singapore Citizen</td> <td>2020.03.11</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>175</td> <td>MAN</td> <td>44</td> <td>Singapore Citizen</td> <td>2020.03.11</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>176</td> <td>WOMAN</td> <td>37</td> <td>British national</td> <td>2020.03.11</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>177</td> <td>MAN</td> <td>26</td> <td>Singapore Citizen</td> <td>2020.03.11</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>178</td> <td>MAN</td> <td>37</td> <td>Filipino national</td> <td>2020.03.11</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>179</td> <td>WOMAN</td> <td>66</td> <td>Singapore Citizen</td> <td>2020.03.11</td> <td>National University Hospital (NUH)</td>
+  </tr>
+  <tr>
+    <td>180</td> <td>MAN</td> <td>71</td> <td>Singapore Citizen</td> <td>2020.03.12</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>181</td> <td>MAN</td> <td>83</td> <td>Indonesian national</td> <td>2020.03.12</td> <td>Gleneagles Hospital (GH)</td>
+  </tr>
+  <tr>
+    <td>182</td> <td>WOMAN</td> <td>76</td> <td>Indonesian national</td> <td>2020.03.12</td> <td>Gleneagles Hospital (GH)</td>
+  </tr>
+  <tr>
+    <td>183</td> <td>MAN</td> <td>29</td> <td>Singapore Citizen</td> <td>2020.03.12</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>184</td> <td>MAN</td> <td>35</td> <td>Filipino national</td> <td>2020.03.12</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>185</td> <td>MAN</td> <td>34</td> <td>Singapore Citizen</td> <td>2020.03.12</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>186</td> <td>MAN</td> <td>64</td> <td>Singapore Citizen</td> <td>2020.03.12</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>187</td> <td>MAN</td> <td>48</td> <td>Singapore Citizen</td> <td>2020.03.12</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>188</td> <td>MAN</td> <td>53</td> <td>Singapore Citizen</td> <td>2020.03.12</td> <td>Khoo Teck Puat Hospital (KTPH)</td>
+  </tr>
+  <tr>
+    <td>189</td> <td>MAN</td> <td>36</td> <td>Indian national</td> <td>2020.03.12</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>190</td> <td>MAN</td> <td>53</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>191</td> <td>WOMAN</td> <td>24</td> <td>Malaysian national</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>192</td> <td>MAN</td> <td>32</td> <td>American national</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>193</td> <td>MAN</td> <td>26</td> <td>Malaysian national</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>194</td> <td>WOMAN</td> <td>24</td> <td>Chinese national</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>195</td> <td>MAN</td> <td>47</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>196</td> <td>WOMAN</td> <td>73</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>197</td> <td>MAN</td> <td>30</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>198</td> <td>WOMAN</td> <td>61</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>199</td> <td>MAN</td> <td>37</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>200</td> <td>WOMAN</td> <td>62</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
     <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
   </tr>
 </table>
 
 1. Variables
+```
+National Centre for Infectious Diseases (NCID)
+KK Women’s and Children’s Hospital (KKH)
+Ng Teng Fong General Hospital (NTFGH)
+Singapore General Hospital (SGH)
+Sengkang General Hospital (SKH)
+National University Hospital (NUH)
+Gleneagles Hospital (GH)
+Khoo Teck Puat Hospital (KTPH)
+```
+```
+Singapore Citizen
+Indonesian national
+British national
+Malaysian national
+Singapore Permanent Resident
+Filipino national
+Chinese national
+```
+
 
 1. Objects and measurement:
 ```
