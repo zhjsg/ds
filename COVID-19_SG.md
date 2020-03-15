@@ -621,6 +621,84 @@ Reference:
     <td>200</td> <td>WOMAN</td> <td>62</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>National Centre for Infectious Diseases (NCID)</td>
   </tr>
   <tr>
+    <td>201</td> <td>WOMAN</td> <td>52</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>Ng Teng Fong General Hospital (NTFGH)</td>
+  </tr>
+  <tr>
+    <td>202</td> <td>MAN</td> <td>44</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>Sengkang General Hospital (SKH)</td>
+  </tr>
+  <tr>
+    <td>203</td> <td>WOMAN</td> <td>36</td> <td>Singapore Citizen</td> <td>2020.03.13</td> <td>Changi General Hospital (CGH)</td>
+  </tr>
+  <tr>
+    <td>204</td> <td>MAN</td> <td>32</td> <td>American national</td> <td>2020.03.13</td> <td>Singapore General Hospital (SGH)</td>
+  </tr>
+  <tr>
+    <td>205</td> <td>WOMAN</td> <td>30</td> <td>Filipino national</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>206</td> <td>WOMAN</td> <td>33</td> <td>New Zealand national</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>207</td> <td>WOMAN</td> <td>40</td> <td>Singapore Citizen</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>208</td> <td>WOMAN</td> <td>26</td> <td>Singapore Citizen</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>209</td> <td>WOMAN</td> <td>32</td> <td>Singapore Citizen</td> <td>2020.03.14</td> <td>Singapore General Hospital’s (SGH)</td>
+  </tr>
+  <tr>
+    <td>210</td> <td>MAN</td> <td>56</td> <td>German national</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>211</td> <td>WOMAN</td> <td>35</td> <td>Filipino national</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>212</td> <td>MAN</td> <td>64</td> <td>Indonesian national</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>213</td> <td>MAN</td> <td>48</td> <td>Singapore Citizen</td> <td>2020.03.14</td> <td>Sengkang General Hospital (SKH)</td>
+  </tr>
+  <tr>
+    <td>214</td> <td>MAN</td> <td>29</td> <td>Singapore Citizen</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>215</td> <td>MAN</td> <td>65</td> <td>Singapore Citizen</td> <td>2020.03.14</td> <td>Singapore General Hospital (SGH)</td>
+  </tr>
+  <tr>
+    <td>216</td> <td>MAN</td> <td>30</td> <td>Singapore Citizen</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>217</td> <td>MAN</td> <td>22</td> <td>Spanish national</td> <td>2020.03.14</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>218</td> <td>WOMAN</td> <td>55</td> <td>Singapore Citizen</td> <td>2020.03.14</td> <td>National University Hospital (NUH)</td>
+  </tr>
+  <tr>
+    <td>219</td> <td>MAN</td> <td>30</td> <td>Singapore Citizen</td> <td>2020.03.15</td> <td>Sengkang General Hospital (SKH)</td>
+  </tr>
+  <tr>
+    <td>220</td> <td>MAN</td> <td>53</td> <td>Singapore Permanent Resident</td> <td>2020.03.15</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>221</td> <td>WOMAN</td> <td>28</td> <td>Filipino national</td> <td>2020.03.15</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>222</td> <td>MAN</td> <td>41</td> <td>French national</td> <td>2020.03.15</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>223</td> <td>MAN</td> <td>60</td> <td>Singapore Citizen</td> <td>2020.03.15</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>224</td> <td>MAN</td> <td>50</td> <td>Singapore Citizen</td> <td>2020.03.15</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>225</td> <td>MAN</td> <td>63</td> <td>Singapore Citizen</td> <td>2020.03.15</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
+    <td>226</td> <td>MAN</td> <td>49</td> <td>Dutch national</td> <td>2020.03.15</td> <td>National Centre for Infectious Diseases (NCID)</td>
+  </tr>
+  <tr>
     <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
   </tr>
 </table>
@@ -644,6 +722,12 @@ Malaysian national
 Singapore Permanent Resident
 Filipino national
 Chinese national
+Dutch national
+German national
+Spanish national
+French national
+New Zealand national
+American national
 ```
 
 
