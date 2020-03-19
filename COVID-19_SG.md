@@ -762,5 +762,13 @@ Three packages are of interest in R:
 6. WTP: Wizlearn Technologies Pte Ltd
 7. SAFRA: SAFRA Jurong
 ```
+##### 1.2.2 ggplot
+```
+c <- ggplot(sg, aes(sg$DateOfConfirmation))
+c + geom_histogram(binwidth = 1, col="green", aes(fill=..count..)) +
+      labs(title="Histogram for Confirmation Date") +
+      labs(x="Confirmation Date", y="Count")
+```
+![COVID-19_SG_ByDate](./images/COVID-19/COVID-19_SG_ByDate.png)
 
 [BACK](./)
