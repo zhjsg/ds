@@ -764,6 +764,10 @@ Three packages are of interest in R:
 ```
 ##### 1.2.2 ggplot
 ```
+library(readr)
+sg <- read_csv("COVID-19_SG.csv")
+
+library(ggplot2)
 c <- ggplot(sg, aes(sg$DateOfConfirmation))
 c + geom_histogram(binwidth = 1, col="green", aes(fill=..count..)) +
       labs(title="Histogram for Confirmation Date") +
