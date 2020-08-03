@@ -284,7 +284,8 @@ print("Standard Deviation: {:.2f} %".format(accuracies.std()*100))
 Accuracy: 96.53 %
 Standard Deviation: 2.07 %
 ```
-### 9. Compare models, choose the most accurate model
+## IV. Compare and Apply
+### 1. Compare models, choose the most accurate model
 ```
 
 ```
@@ -294,12 +295,12 @@ Conclusion:
 ```
 (1) .
 ```
-### 6. Apply model
+### 2. Apply model
 ```
 
 ```
 
-### 7. Conclusion
+### 3. Conclusion
 ```
 1. .
 ```
