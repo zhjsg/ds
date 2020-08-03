@@ -62,7 +62,7 @@ X_test = sc.transform(X_test)
 
 ### 1. Logistic regression
 
-#### 1.1 Build logistic regresson and verify
+#### 1.1 Training the Logistic Regression model on the Training set
 ```
 from sklearn.linear_model import LogisticRegression
 classifier = LogisticRegression(random_state = 0)
@@ -88,32 +88,77 @@ accuracy_score(y_test, y_pred)
 0.9473684210526315
 ```
 
-### 2. Decision Tree
-#### 2.1 Build decision tree
+### 2. K nearest neighbors
+#### 2.1 Train K nearest neighbors on the training set
+```
+from sklearn.neighbors import KNeighborsClassifier
+classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
+classifier.fit(X_train, y_train)
+```
+#### 2.2 Predicting the Test set results
+```
+y_pred = classifier.predict(X_test)
+print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+```
+#### 2.3 Making the Confusion Matrix
+```
+from sklearn.metrics import confusion_matrix, accuracy_score
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+accuracy_score(y_test, y_pred)
+```
+```
+[[103   4]
+ [  5  59]]
+0.9473684210526315
 ```
 
-```
+### 3. Support Vector Machine
+#### 3.1 Train Support Vector Machine on the training set
+
+#### 3.2 Predicting the Test set results
+
+#### 3.3 Making the Confusion Matrix
+
+### 4. Kernel SVM
+#### 4.1 Train Kernel SVM on the training set
+
+#### 4.2 Predicting the Test set results
+
+#### 4.3 Making the Confusion Matrix
+
+### 5. Naive Bayes
+#### 5.1 Train Naive Bayes on the training set
+
+#### 5.2 Predicting the test set results
+
+#### 5.3 Make the Confusion Matrix
+
+### 6. Decision Tree classification
+
+#### 6.1 Train Decision Tree on the training set
+
+#### 6.2 Predicting the test set results
+
+#### 6.3 Make the Confusion Matrix
+
+### 7. Random Forest classification
+
+#### 7.1 Train Random Forest on the training set
+
+#### 7.2 Predicting the test set results
+
+#### 7.3 Make the Confusion Matrix
+
+### 8. XGBoost
+#### 8.1 Train XGBoost on the training set
+
+#### 8.2 Predicting the test set results
+
+#### 8.3 Make the Confusion Matrix
 
 
-#### 2.2 Evaluate model, draw ROC/AUC
-
-
-### 3. Random forest
-#### 3.1 Build random forest
-
-
-
-#### 3.2 Evaluate model, draw ROC/AUC
-
-
-### 4. SVM
-#### 4.1 Build SVM
-
-
-#### 4.2 Evaluate model, draw ROC/AUC
-
-
-### 5. Compare models, choose the most accurate model
+### 9. Compare models, choose the most accurate model
 ```
 
 ```
