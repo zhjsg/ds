@@ -302,6 +302,6 @@ Conclusion:
 ```
 Reference:
 
-1. [https://blog.csdn.net/qq_20408903/article/details/80628331](https://blog.csdn.net/qq_20408903/article/details/80628331)
+1. [Predictive Models of Student College Commitment Decisions Using Machine Learning](https://www.mdpi.com/2306-5729/4/2/65/htm)
 
 [BACK](./)
