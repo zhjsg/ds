@@ -4,10 +4,6 @@ layout: default
 
 [BACK](./)
 
-Reference:
-
-1. [https://www.certifiedanalytics.org](https://www.certifiedanalytics.org)
-
 ## I Business Problem (Question) Framing
 
 1. Obtain or receive problem statement and usability requirements
@@ -66,5 +62,9 @@ Reference:
 1. Evaluate the model’s effectiveness at solving the business problem
 
 * * *
+
+Reference:
+
+1. [https://www.certifiedanalytics.org](https://www.certifiedanalytics.org)
 
 [BACK](./)
