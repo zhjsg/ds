@@ -4,10 +4,6 @@ layout: default
 
 [BACK](./)
 
-Reference:
-
-1. [https://blog.csdn.net/qq_20408903/article/details/80628331](https://blog.csdn.net/qq_20408903/article/details/80628331)
-
 ## I. Background
 
 1. To classify tumor is good or bad.
@@ -304,5 +300,8 @@ Conclusion:
 ```
 1. .
 ```
+Reference:
+
+1. [https://blog.csdn.net/qq_20408903/article/details/80628331](https://blog.csdn.net/qq_20408903/article/details/80628331)
 
 [BACK](./)
