@@ -302,6 +302,6 @@ Conclusion:
 ```
 Reference:
 
-1. [Predictive Models of Student College Commitment Decisions Using Machine Learning](https://www.mdpi.com/2306-5729/4/2/65/htm)
+1. Predictive Models of Student College Commitment Decisions Using Machine Learning. [https://www.mdpi.com/2306-5729/4/2/65/htm](https://www.mdpi.com/2306-5729/4/2/65/htm)
 
 [BACK](./)
