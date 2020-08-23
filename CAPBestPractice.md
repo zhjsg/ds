@@ -4,7 +4,7 @@ layout: default
 
 [BACK](./)
 
-## I Business Problem (Question) Framing
+## I. Business Problem (Question) Framing
 
 1. Obtain or receive problem statement and usability requirements
 1. Identify stakeholders
@@ -13,7 +13,7 @@ layout: default
 1. Define an initial set of business benefits
 1. Obtain stakeholder agreement on the problem statement
 
-## II Analytics Problem Framing
+## II. Analytics Problem Framing
 
 1. Reformulate problem statement as an analytics problem
 1. Develop a proposed set of drivers and relationships to outputs
@@ -21,7 +21,7 @@ layout: default
 1. Define key metrics of success
 1. Obtain stakeholder agreement
 
-## III Data
+## III. Data
 
 1. Identify and prioritize data needs and sources
 1. Acquire data
@@ -30,14 +30,14 @@ layout: default
 1. Document and report findings (e.g., insights, results, business performance)
 1. Refine the business and analytics problem statements
 
-## IV Methodology (Approach) Selection
+## IV. Methodology (Approach) Selection
 
 1. Identify available problem solving approaches (methods)
 1. Select software tools
 1. Test approaches (methods)
 1. Select approaches (methods)
 
-## V Model Building
+## V. Model Building
 
 1. Identify model structures
 1. Run and evaluate the models
@@ -45,7 +45,7 @@ layout: default
 1. Integrate the models
 1. Document and communicate findings (including assumptions, limitations, and constraints)
 
-## VI Deployment
+## VI. Deployment
 
 1. Perform business validation of the model
 1. Deliver report with findings
@@ -53,7 +53,7 @@ layout: default
 1. Deliver production model/system
 1. Support deployment
 
-## VII Model Life Cycle Management
+## VII. Model Life Cycle Management
 
 1. Document initial structure
 1. Track model quality
