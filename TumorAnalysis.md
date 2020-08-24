@@ -39,7 +39,7 @@ Random Forests
 XGBoost
 ```
 
-## II. Data Analysis
+## II. Data Processing
 
 ### 1. Importing the libraries
 ```
@@ -99,9 +99,14 @@ df.loc[0] = ['Logistic Regression', accuracies.mean(), auc.mean()]
 ```
 #### 1.2 Results
 ```
-Classifier	CV_Accuracy	CV_AUC
-0	Logistic Regression	0.967003	0.995386
-
+<table>
+  <tr>
+    <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+  </tr>
+</table>
 ```
 ### 2. K nearest neighbors
 #### 2.1 Train K-Nearest Neighbors using k-fold cross-validation
