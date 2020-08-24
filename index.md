@@ -3,20 +3,15 @@ layout: default
 ---
 
 [CAP Best Practice](./CAPBestPractice.html)
-
+![logo-cap](./images/logo/logo-cap.png)
 * * *
-
 [Employee Attrition & Performance](./EmployeeAnalysis.html)
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
+![view_hr_file](./images/logo/logo-employee.png)
 * * *
-
 [Tumor Analysis](./TumorAnalysis.html)
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
+![view_hr_file](./images/logo/logo-tumor.png)
 * * *
+
 <!--
 [COVID-19 SG Analysis](./COVID-19_SG.html)
 
