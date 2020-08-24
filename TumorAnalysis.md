@@ -12,20 +12,20 @@ layout: default
 
 1. Variables
 ```
-1. Sample code number: id number 
-2. Clump Thickness: 1 - 10 
-3. Uniformity of Cell Size: 1 - 10 
-4. Uniformity of Cell Shape: 1 - 10 
-5. Marginal Adhesion: 1 - 10 
-6. Single Epithelial Cell Size: 1 - 10 
-7. Bare Nuclei: 1 - 10 
-8. Bland Chromatin: 1 - 10 
-9. Normal Nucleoli: 1 - 10 
-10. Mitoses: 1 - 10 
-11. Class: (2 for benign, 4 for malignant)
+Sample code number: id number 
+Clump Thickness: 1 - 10 
+Uniformity of Cell Size: 1 - 10 
+Uniformity of Cell Shape: 1 - 10 
+Marginal Adhesion: 1 - 10 
+Single Epithelial Cell Size: 1 - 10 
+Bare Nuclei: 1 - 10 
+Bland Chromatin: 1 - 10 
+Normal Nucleoli: 1 - 10 
+Mitoses: 1 - 10 
+Class: (2 for benign, 4 for malignant)
 ```
 
-4. Objects and measurement:
+1. Objects and measurement:
 ```
 (1) To classify tumor is benign or malignant.
 (2) The machine learning techniques utilized are:
@@ -402,9 +402,10 @@ best_parameters = grid_search.best_params_
 print("Best AUC: {:.2f} %".format(best_auc*100))
 print("Best Parameters:", best_parameters)
 ```
-
+```
 Best AUC: 99.60 %
 Best Parameters: {'C': 0.25, 'max_iter': 40, 'multi_class': 'auto', 'penalty': 'l1', 'solver': 'saga'}
+```
 
 ### 3. Predict Test set
 ```
@@ -432,7 +433,7 @@ After optimizing, the AUC score for the Logistic Regression classifier improved 
 References:
 
 1. Predictive Models of Student College Commitment Decisions Using Machine Learning. [https://www.mdpi.com/2306-5729/4/2/65/htm](https://www.mdpi.com/2306-5729/4/2/65/htm)
-2. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
+2. UCI Machine Learning Repository. [https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
 
 * * *
 [BACK](./)
