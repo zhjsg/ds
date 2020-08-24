@@ -238,6 +238,7 @@ df.loc[4] = ['Naive Bayer', accuracies.mean(), auc.mean()]
   <tr>
     <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
   </tr>
+</table>
 
 ### 6. Decision Tree classification
 
