@@ -280,6 +280,7 @@ df.loc[5] = ['Decision Tree', accuracies.mean(), auc.mean()]
   <tr>
     <td>Decision Tree</td> <td>0.952424</td> <td>0.946226</td>
   </tr>
+</table>
 
 ### 7. Random Forest classification
 
