@@ -375,24 +375,62 @@ df.loc[7] = ['XGBoost', accuracies.mean(), auc.mean()]
 </table>
 
 ## IV. Compare and Apply
-### 1. Compare models, choose the most accurate model
+### 1. Compare models, choose the final model
+```
+We will choose the final model only based on the cross-validated AUC score. The Logistic Regression model had the highest AUC score of 99.54%, so Logistic Regression model is the final model.
 ```
 
+### 2. Hyperparameter Optimization
 ```
+After we chose the Logistic Regression classifier as the final model to implement on our binary classification problem, we wished to optimize its performance. We implemented hyperparameter optimization by using grid search to find parameters to improve the performance of the Logistic Regression classifier.
+```
+```
+from sklearn.model_selection import GridSearchCV
+classifier = LogisticRegression(random_state = 0)
 
+parameters = [{'C': [0.25, 0.5, 0.75, 1], 
+               'penalty': ['l1', 'l2', 'elasticnet', 'none'], 
+               'solver': ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga'],
+               'multi_class':['auto', 'ovr', 'multinomial'],
+               'max_iter':[35,40,50,60,70,90,100,110]}
+              ]
+grid_search = GridSearchCV(estimator = classifier,
+                           param_grid = parameters,
+                           scoring = 'roc_auc',
+                           cv = 10,
+                           n_jobs = -1)
+grid_search.fit(X_train, y_train)
+best_auc = grid_search.best_score_
+best_parameters = grid_search.best_params_
+print("Best AUC: {:.2f} %".format(best_auc*100))
+print("Best Parameters:", best_parameters)
+```
+```
+Best AUC: 99.60 %
+Best Parameters: {'C': 0.25, 'max_iter': 40, 'multi_class': 'auto', 'penalty': 'l1', 'solver': 'saga'}
+```
+### 3. Run
+```
+from sklearn.metrics import roc_auc_score
 
-Conclusion:
-```
-(1) .
-```
-### 2. Apply model
-```
+# Logistic Regression
+classifier = LogisticRegression(random_state = 0, C = 0.25, max_iter = 40, multi_class='auto', penalty='l1', solver='saga')
+classifier.fit(X_train, y_train)
 
-```
+probs = classifier.predict_proba(X_test)
 
-### 3. Conclusion
+# keep probabilities for the positive outcome only
+probs = probs[:, 1]
+# calculate scores
+auc = roc_auc_score(y_test, probs)
+print("Area under curve: {:.2f} %".format(auc*100))
 ```
-1. .
+```
+Area under curve: 99.45 %
+```
+### 4. Conclusion
+```
+After optimizing, the AUC score for the Logistic Regression classifier improved slightly from 99.54% to 99.60% on the training set. The AUC score on the test set was 99.45%.
 ```
 References:
 
