@@ -1,14 +1,17 @@
 ---
 layout: default
 ---
-
+<!--
 [CAP Best Practice](./CAPBestPractice.html)
 ![logo-cap](./images/logo/logo-cap.png)
+-->
 * * *
 [Employee Attrition & Performance](./EmployeeAnalysis.html)
+
 ![view_hr_file](./images/logo/logo-employee.png)
 * * *
 [Tumor Analysis](./TumorAnalysis.html)
+
 ![view_hr_file](./images/logo/logo-tumor.png)
 * * *
 
