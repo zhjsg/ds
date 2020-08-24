@@ -376,14 +376,11 @@ df.loc[7] = ['XGBoost', accuracies.mean(), auc.mean()]
 
 ## IV. Compare and Apply
 ### 1. Compare models, choose the final model
-```
 We will choose the final model only based on the cross-validated AUC score. The Logistic Regression model had the highest AUC score of 99.54%, so Logistic Regression model is the final model.
-```
 
 ### 2. Hyperparameter Optimization
-```
 After we chose the Logistic Regression classifier as the final model to implement on our binary classification problem, we wished to optimize its performance. We implemented hyperparameter optimization by using grid search to find parameters to improve the performance of the Logistic Regression classifier.
-```
+
 ```
 from sklearn.model_selection import GridSearchCV
 classifier = LogisticRegression(random_state = 0)
@@ -405,11 +402,11 @@ best_parameters = grid_search.best_params_
 print("Best AUC: {:.2f} %".format(best_auc*100))
 print("Best Parameters:", best_parameters)
 ```
-```
+
 Best AUC: 99.60 %
 Best Parameters: {'C': 0.25, 'max_iter': 40, 'multi_class': 'auto', 'penalty': 'l1', 'solver': 'saga'}
-```
-### 3. Run
+
+### 3. Predict Test set
 ```
 from sklearn.metrics import roc_auc_score
 
@@ -429,11 +426,13 @@ print("Area under curve: {:.2f} %".format(auc*100))
 Area under curve: 99.45 %
 ```
 ### 4. Conclusion
-```
+
 After optimizing, the AUC score for the Logistic Regression classifier improved slightly from 99.54% to 99.60% on the training set. The AUC score on the test set was 99.45%.
-```
+
 References:
 
 1. Predictive Models of Student College Commitment Decisions Using Machine Learning. [https://www.mdpi.com/2306-5729/4/2/65/htm](https://www.mdpi.com/2306-5729/4/2/65/htm)
-2. [UCI Machine Learning Repository] (https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
+2. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
+
+* * *
 [BACK](./)
