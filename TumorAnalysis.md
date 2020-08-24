@@ -6,18 +6,37 @@ layout: default
 
 ## I. Background
 
-1. To classify tumor is good or bad.
+1. To classify tumor is benign or malignant.
 
-1. Data source: kaggle
+1. Data source: UCI
 
 1. Variables
 ```
-size: the size of tumor
+1. Sample code number: id number 
+2. Clump Thickness: 1 - 10 
+3. Uniformity of Cell Size: 1 - 10 
+4. Uniformity of Cell Shape: 1 - 10 
+5. Marginal Adhesion: 1 - 10 
+6. Single Epithelial Cell Size: 1 - 10 
+7. Bare Nuclei: 1 - 10 
+8. Bland Chromatin: 1 - 10 
+9. Normal Nucleoli: 1 - 10 
+10. Mitoses: 1 - 10 
+11. Class: (2 for benign, 4 for malignant)
 ```
 
 1. Objects and measurement:
 ```
-(1) To classify tumor is good or bad.
+(1) To classify tumor is benign or malignant.
+(2) The machine learning techniques utilized are:
+Logistic Regression
+K-Nearest Neighbours
+Support Vector Machine
+Kernel SVM
+Naive Bayes
+Decision Tree
+Random Forests
+XGBoost
 ```
 
 ## II. Data Analysis
@@ -49,237 +68,188 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 ```
-
+<!--
 ### 5. View data
 ```
+```
+-->
+### 5. Define a Dataframe
+```
+df = pd.DataFrame(columns=['Classifier', 'CV_Accuracy', 'CV_AUC'], dtype=float)
 ```
 
 ## III. Build predicting model
 
-### 1. Logistic regression
+### 1. Logistic Regression
 
-#### 1.1 Training the Logistic Regression model on the Training set
+#### 1.1 Training the Logistic Regression model using k-fold cross-validation
 ```
 from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_score
+
+#Classifier
 classifier = LogisticRegression(random_state = 0)
-classifier.fit(X_train, y_train)
-```
 
-#### 1.2 Predicting the Test set results
-```
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
-```
+#Accuracy
+accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
 
-#### 1.3 Making the Confusion Matrix
+#ROC_AUC
+auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
+df.loc[0] = ['Logistic Regression', accuracies.mean(), auc.mean()]
 ```
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
+#### 1.2 Results
 ```
-```
-[[103   4]
- [  5  59]]
-0.9473684210526315
-```
+Classifier	CV_Accuracy	CV_AUC
+0	Logistic Regression	0.967003	0.995386
 
+```
 ### 2. K nearest neighbors
-#### 2.1 Train K nearest neighbors on the training set
+#### 2.1 Train K-Nearest Neighbors using k-fold cross-validation
 ```
 from sklearn.neighbors import KNeighborsClassifier
+
+#Classifier
 classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
-classifier.fit(X_train, y_train)
+
+#Accuracy
+accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
+
+#ROC_AUC
+auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
+df.loc[1] = ['K-NN', accuracies.mean(), auc.mean()]
 ```
-#### 2.2 Predicting the Test set results
+#### 2.2 Results
 ```
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
-```
-#### 2.3 Making the Confusion Matrix
-```
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
-```
-```
-[[103   4]
- [  5  59]]
-0.9473684210526315
+
 ```
 
 ### 3. Support Vector Machine
-#### 3.1 Train Support Vector Machine on the training set
+#### 3.1 Train Support Vector Machine using k-fold cross-validation
 ```
 from sklearn.svm import SVC
+
+#Classifier
 classifier = SVC(kernel = 'linear', random_state = 0)
-classifier.fit(X_train, y_train)
-```
-#### 3.2 Predicting the Test set results
-```
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+
+#Accuracy
+accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
+
+#ROC_AUC
+auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
+df.loc[2] = ['SVM', accuracies.mean(), auc.mean()]
 ```
 
-#### 3.3 Making the Confusion Matrix
+#### 3.2 Results
 ```
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
-```
-```
-[[102   5]
- [  5  59]]
-0.9415204678362573
+
 ```
 ### 4. Kernel SVM
-#### 4.1 Train Kernel SVM on the training set
+#### 4.1 Train Kernel SVM using k-fold cross-validation
 ```
 from sklearn.svm import SVC
-classifier = SVC(kernel = 'rbf', random_state = 0)
-classifier.fit(X_train, y_train)
+
+#Classifier
+classifier = SVC(kernel = 'rbf', random_state = 0
+
+#Accuracy
+accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
+
+#ROC_AUC
+auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
+df.loc[3] = ['Kernel SVM', accuracies.mean(), auc.mean()]
 ```
 
-#### 4.2 Predicting the Test set results
-```
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+#### 4.2 Results
 ```
 
-#### 4.3 Making the Confusion Matrix
-```
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
-```
-```
-[[102   5]
- [  3  61]]
-0.9532163742690059
 ```
 
 ### 5. Naive Bayes
-#### 5.1 Train Naive Bayes on the training set
+#### 5.1 Train Naive Bayes using k-fold cross-validation
 ```
 from sklearn.naive_bayes import GaussianNB
+
+#Classifier
 classifier = GaussianNB()
-classifier.fit(X_train, y_train)
+
+#Accuracy
+accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
+
+#ROC_AUC
+auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
+df.loc[4] = ['Naive Bayer', accuracies.mean(), auc.mean()]
 ```
 
-#### 5.2 Predicting the test set results
-```
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+#### 5.2 Results
 ```
 
-#### 5.3 Make the Confusion Matrix
-```
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
-```
-```
-[[99  8]
- [ 2 62]]
-0.9415204678362573
 ```
 
 ### 6. Decision Tree classification
 
-#### 6.1 Train Decision Tree on the training set
+#### 6.1 Train Decision Tree using k-fold cross-validation
 ```
 from sklearn.tree import DecisionTreeClassifier
+
+#Classifier
 classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
-classifier.fit(X_train, y_train)
+
+#Accuracy
+accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
+
+#ROC_AUC
+auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
+df.loc[5] = ['Decision Tree', accuracies.mean(), auc.mean()]
 ```
 
-#### 6.2 Predicting the test set results
-```
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+#### 6.2 Results
 ```
 
-#### 6.3 Make the Confusion Matrix
-```
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
-```
-```
-[[103   4]
- [  3  61]]
-0.9590643274853801
 ```
 
 ### 7. Random Forest classification
 
-#### 7.1 Train Random Forest on the training set
+#### 7.1 Train Random Forest using k-fold cross-validation
 ```
 from sklearn.ensemble import RandomForestClassifier
+
+#Classifier
 classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
-classifier.fit(X_train, y_train)
+
+#Accuracy
+accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
+
+#ROC_AUC
+auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
+df.loc[6] = ['Random Forest', accuracies.mean(), auc.mean()]
 ```
 
-#### 7.2 Predicting the test set results
+#### 7.2 Results
 ```
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
-```
-#### 7.3 Make the Confusion Matrix
-```
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
-```
-```
-[[102   5]
- [  6  58]]
-0.935672514619883
+
 ```
 
 ### 8. XGBoost
-#### 8.1 Train XGBoost on the training set
+#### 8.1 Train XGBoost using k-fold cross-validation
 ```
 from xgboost import XGBClassifier
+
+#Classifier
 classifier = XGBClassifier()
-classifier.fit(X_train, y_train)
+
+#Accuracy
+accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
+
+#ROC_AUC
+auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
+df.loc[7] = ['XGBoost', accuracies.mean(), auc.mean()]
 ```
 
-#### 8.2 Predicting the test set results
-```
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+#### 8.2 Results
 ```
 
-#### 8.3 Make the Confusion Matrix
 ```
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
-```
-```
-[[84  3]
- [ 0 50]]
-0.9781021897810219
-```
-#### 8.4 Applying k-Fold Cross Validation
-```
-from sklearn.model_selection import cross_val_score
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10)
-print("Accuracy: {:.2f} %".format(accuracies.mean()*100))
-print("Standard Deviation: {:.2f} %".format(accuracies.std()*100))
-```
-```
-Accuracy: 96.53 %
-Standard Deviation: 2.07 %
-```
+
 ## IV. Compare and Apply
 ### 1. Compare models, choose the most accurate model
 ```
@@ -300,8 +270,8 @@ Conclusion:
 ```
 1. .
 ```
-Reference:
+References:
 
 1. Predictive Models of Student College Commitment Decisions Using Machine Learning. [https://www.mdpi.com/2306-5729/4/2/65/htm](https://www.mdpi.com/2306-5729/4/2/65/htm)
-
+2. [UCI Machine Learning Repository] (https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
 [BACK](./)
