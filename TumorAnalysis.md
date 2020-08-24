@@ -25,7 +25,7 @@ layout: default
 11. Class: (2 for benign, 4 for malignant)
 ```
 
-1. Objects and measurement:
+4. Objects and measurement:
 ```
 (1) To classify tumor is benign or malignant.
 (2) The machine learning techniques utilized are:
