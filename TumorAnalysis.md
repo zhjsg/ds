@@ -124,7 +124,17 @@ df.loc[1] = ['K-NN', accuracies.mean(), auc.mean()]
 ```
 #### 2.2 Results
 ```
-
+<table>
+  <tr>
+    <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+  </tr>
+  <tr>
+    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+  </tr>
+</table>
 ```
 
 ### 3. Support Vector Machine
@@ -145,7 +155,20 @@ df.loc[2] = ['SVM', accuracies.mean(), auc.mean()]
 
 #### 3.2 Results
 ```
-
+<table>
+  <tr>
+    <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+  </tr>
+  <tr>
+    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+  </tr>
+  <tr>
+    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+  </tr>
+</table>
 ```
 ### 4. Kernel SVM
 #### 4.1 Train Kernel SVM using k-fold cross-validation
@@ -165,7 +188,23 @@ df.loc[3] = ['Kernel SVM', accuracies.mean(), auc.mean()]
 
 #### 4.2 Results
 ```
-
+<table>
+  <tr>
+    <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+  </tr>
+  <tr>
+    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+  </tr>
+  <tr>
+    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+  </tr>
+  <tr>
+    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+  </tr>
+</table>
 ```
 
 ### 5. Naive Bayes
@@ -186,7 +225,25 @@ df.loc[4] = ['Naive Bayer', accuracies.mean(), auc.mean()]
 
 #### 5.2 Results
 ```
-
+<table>
+  <tr>
+    <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+  </tr>
+  <tr>
+    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+  </tr>
+  <tr>
+    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+  </tr>
+  <tr>
+    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+  </tr>
+  <tr>
+    <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
+  </tr>
 ```
 
 ### 6. Decision Tree classification
@@ -208,7 +265,28 @@ df.loc[5] = ['Decision Tree', accuracies.mean(), auc.mean()]
 
 #### 6.2 Results
 ```
-
+<table>
+  <tr>
+    <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+  </tr>
+  <tr>
+    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+  </tr>
+  <tr>
+    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+  </tr>
+  <tr>
+    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+  </tr>
+  <tr>
+    <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
+  </tr>
+  <tr>
+    <td>Decision Tree</td> <td>0.952424</td> <td>0.946226</td>
+  </tr>
 ```
 
 ### 7. Random Forest classification
@@ -230,7 +308,32 @@ df.loc[6] = ['Random Forest', accuracies.mean(), auc.mean()]
 
 #### 7.2 Results
 ```
-
+<table>
+  <tr>
+    <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+  </tr>
+  <tr>
+    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+  </tr>
+  <tr>
+    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+  </tr>
+  <tr>
+    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+  </tr>
+  <tr>
+    <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
+  </tr>
+  <tr>
+    <td>Decision Tree</td> <td>0.952424</td> <td>0.946226</td>
+  </tr>
+  <tr>
+    <td>Random Forest</td> <td>0.961515</td> <td>0.984498</td>
+  </tr>
+</table>
 ```
 
 ### 8. XGBoost
@@ -251,7 +354,35 @@ df.loc[7] = ['XGBoost', accuracies.mean(), auc.mean()]
 
 #### 8.2 Results
 ```
-
+<table>
+  <tr>
+    <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+  </tr>
+  <tr>
+    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+  </tr>
+  <tr>
+    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+  </tr>
+  <tr>
+    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+  </tr>
+  <tr>
+    <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
+  </tr>
+  <tr>
+    <td>Decision Tree</td> <td>0.952424</td> <td>0.946226</td>
+  </tr>
+  <tr>
+    <td>Random Forest</td> <td>0.961515</td> <td>0.984498</td>
+  </tr>
+  <tr>
+    <td>XGBoost</td> <td>0.965253</td> <td>0.991410</td>
+  </tr>
+</table>
 ```
 
 ## IV. Compare and Apply
