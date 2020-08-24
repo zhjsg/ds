@@ -98,7 +98,6 @@ auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10,
 df.loc[0] = ['Logistic Regression', accuracies.mean(), auc.mean()]
 ```
 #### 1.2 Results
-```
 <table>
   <tr>
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
@@ -107,7 +106,7 @@ df.loc[0] = ['Logistic Regression', accuracies.mean(), auc.mean()]
     <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
   </tr>
 </table>
-```
+
 ### 2. K nearest neighbors
 #### 2.1 Train K-Nearest Neighbors using k-fold cross-validation
 ```
