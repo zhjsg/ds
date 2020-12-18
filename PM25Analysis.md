@@ -6,7 +6,7 @@ layout: default
 
 ## I. Background
 
-1. To analysis and predict PM2.5.
+1. To analyse and predict PM2.5.
 
 1. Data source: UCI
 
@@ -29,14 +29,15 @@ Ir: Cumulated hours of rain
 
 1. Objects and measurement:
 ```
-(1) To build the PM2.5 prediction model.
-(2) The machine learning techniques utilized are:
+(1) To build the PM2.5 prediction model by using the following models:
 Multiple Linear Regression
 Support Vector Regression
 Decision Tree
 Random Forest
 Artificial Neural Network
 XGBoost
+(2) Use Mean Squared Error as measurement. The lower MES score the model has, the better the model is.
+(3) Choose the best among the above models.
 ```
 
 ## II. Data Processing
@@ -57,7 +58,7 @@ dataset = pd.read_csv('PRSA_data.csv')
 dataset.head()
 ```
 
-# View Dataset Info
+### View Dataset Info
 ```
 dataset.info()
 ```
@@ -84,7 +85,7 @@ dtypes: float64(4), int64(8), object(1)
 memory usage: 4.3+ MB
 None
 ```
-# Move target to the last column
+### Move target to the last column
 ```
 dataset = dataset[ [ col for col in dataset.columns 
                     if col != 'pm2.5'] + ['pm2.5'] ]
@@ -125,7 +126,6 @@ df = pd.DataFrame(columns=['Regression', 'Mean Squared Error'], dtype=float)
 ## III. Build predicting model
 
 ### 1. Multiple Linear Regression
-
 #### 1.1 Training the Multiple Linear Regression model
 ```
 # Build the model
@@ -301,8 +301,8 @@ mean_squared_error(y_test, y_pred)
     <td>ANN</td> <td>2276</td>
   </tr>
 </table>
-### 6. XGBoost
 
+### 6. XGBoost
 #### 6.1 Train XGBoost
 ```
 # Build the model
