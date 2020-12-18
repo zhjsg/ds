@@ -8,7 +8,7 @@ layout: default
 * * *
 [PM2.5 Analysis](./PM25Analysis.html)
 
-![pm25](./images/logo/logo-pm25.png)
+![pm25](./images/logo/logo-PM25.png)
 * * *
 [Tumor Analysis](./TumorAnalysis.html)
 
