@@ -8,15 +8,15 @@ layout: default
 * * *
 [PM2.5 Analysis](./PM25Analysis.html)
 
-![view_hr_file](./images/logo/logo-employee.png)
+![pm25](./images/logo/logo-pm25.png)
 * * *
 [Tumor Analysis](./TumorAnalysis.html)
 
-![view_hr_file](./images/logo/logo-tumor.png)
+![tumor](./images/logo/logo-tumor.png)
 * * *
 [Employee Attrition Prediction](./EmployeeAnalysis.html)
 
-![view_hr_file](./images/logo/logo-employee.png)
+![employee](./images/logo/logo-employee.png)
 * * *
 
 <!--
