@@ -6,13 +6,17 @@ layout: default
 ![logo-cap](./images/logo/logo-cap.png)
 -->
 * * *
-[Employee Attrition & Performance](./EmployeeAnalysis.html)
+[PM2.5 Analysis](./PM25Analysis.html)
 
 ![view_hr_file](./images/logo/logo-employee.png)
 * * *
 [Tumor Analysis](./TumorAnalysis.html)
 
 ![view_hr_file](./images/logo/logo-tumor.png)
+* * *
+[Employee Attrition Prediction](./EmployeeAnalysis.html)
+
+![view_hr_file](./images/logo/logo-employee.png)
 * * *
 
 <!--
