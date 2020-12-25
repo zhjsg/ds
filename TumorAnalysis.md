@@ -189,30 +189,36 @@ test-set roc_auc score: 0.973
 ```
 from sklearn.svm import SVC
 
-#Classifier
-classifier = SVC(kernel = 'linear', random_state = 0)
+param_grid = {'kernel':  ['linear', 'poly', 'rbf', 'sigmoid'],
+             }
+classifier = GridSearchCV(SVC(), param_grid=param_grid, cv=10, scoring='roc_auc')
+classifier.fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
 
-#Accuracy
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
-
-#ROC_AUC
-auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
-df.loc[2] = ['SVM', accuracies.mean(), auc.mean()]
+print("best cross-validation score: {:.3f}".format(classifier.best_score_))
+print("best parameters:", classifier.best_params_)
+print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
+print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
 ```
-
+```
+best cross-validation score: 0.996
+best parameters: {'kernel': 'linear'}
+test-set accuracy score: 0.956
+test-set roc_auc score: 0.957
+```
 #### 3.2 Results
 <table>
   <tr>
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
   </tr>
   <tr>
-    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+    <td>Logistic Regression</td> <td>0.956</td> <td>0.953</td>
   </tr>
   <tr>
-    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+    <td>K-NN</td> <td>0.971</td> <td>0.973</td>
   </tr>
   <tr>
-    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+    <td>SVM</td> <td>0.956</td> <td>0.957</td>
   </tr>
 </table>
 
@@ -221,33 +227,39 @@ df.loc[2] = ['SVM', accuracies.mean(), auc.mean()]
 ```
 from sklearn.svm import SVC
 
-#Classifier
-classifier = SVC(kernel = 'rbf', random_state = 0
+param_grid = {'kernel':  ['rbf'],
+             }
+classifier = GridSearchCV(SVC(), param_grid=param_grid, cv=10, scoring='roc_auc')
+classifier.fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
 
-#Accuracy
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
-
-#ROC_AUC
-auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
-df.loc[3] = ['Kernel SVM', accuracies.mean(), auc.mean()]
+print("best cross-validation score: {:.3f}".format(classifier.best_score_))
+print("best parameters:", classifier.best_params_)
+print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
+print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
 ```
-
+```
+best cross-validation score: 0.991
+best parameters: {'kernel': 'rbf'}
+test-set accuracy score: 0.964
+test-set roc_auc score: 0.967
+```
 #### 4.2 Results
 <table>
   <tr>
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
   </tr>
   <tr>
-    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+    <td>Logistic Regression</td> <td>0.956</td> <td>0.953</td>
   </tr>
   <tr>
-    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+    <td>K-NN</td> <td>0.971</td> <td>0.973</td>
   </tr>
   <tr>
-    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+    <td>SVM</td> <td>0.956</td> <td>0.957</td>
   </tr>
   <tr>
-    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+    <td>Kernel SVM</td> <td>0.964</td> <td>0.967</td>
   </tr>
 </table>
 
@@ -256,36 +268,42 @@ df.loc[3] = ['Kernel SVM', accuracies.mean(), auc.mean()]
 ```
 from sklearn.naive_bayes import GaussianNB
 
-#Classifier
-classifier = GaussianNB()
+param_grid = {
+             }
+classifier = GridSearchCV(GaussianNB(), param_grid=param_grid, cv=10, scoring='roc_auc')
+classifier.fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
 
-#Accuracy
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
-
-#ROC_AUC
-auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
-df.loc[4] = ['Naive Bayer', accuracies.mean(), auc.mean()]
+print("best cross-validation score: {:.3f}".format(classifier.best_score_))
+print("best parameters:", classifier.best_params_)
+print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
+print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
 ```
-
+```
+best cross-validation score: 0.984
+best parameters: {}
+test-set accuracy score: 0.949
+test-set roc_auc score: 0.960
+```
 #### 5.2 Results
 <table>
   <tr>
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
   </tr>
   <tr>
-    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+    <td>Logistic Regression</td> <td>0.956</td> <td>0.953</td>
   </tr>
   <tr>
-    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+    <td>K-NN</td> <td>0.971</td> <td>0.973</td>
   </tr>
   <tr>
-    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+    <td>SVM</td> <td>0.956</td> <td>0.957</td>
   </tr>
   <tr>
-    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+    <td>Kernel SVM</td> <td>0.964</td> <td>0.967</td>
   </tr>
   <tr>
-    <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
+    <td>Naive Bayer</td> <td>0.949</td> <td>0.960</td>
   </tr>
 </table>
 
@@ -295,39 +313,46 @@ df.loc[4] = ['Naive Bayer', accuracies.mean(), auc.mean()]
 ```
 from sklearn.tree import DecisionTreeClassifier
 
-#Classifier
-classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
+param_grid = {'criterion': ['entropy', 'gini'],
+              'splitter': ['best', 'random'],
+             }
+classifier = GridSearchCV(DecisionTreeClassifier(), param_grid=param_grid, cv=10, scoring='roc_auc')
+classifier.fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
 
-#Accuracy
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
-
-#ROC_AUC
-auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
-df.loc[5] = ['Decision Tree', accuracies.mean(), auc.mean()]
+print("best cross-validation score: {:.3f}".format(classifier.best_score_))
+print("best parameters:", classifier.best_params_)
+print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
+print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
 ```
-
+```
+best cross-validation score: 0.945
+best parameters: {'criterion': 'entropy', 'splitter': 'best'}
+test-set accuracy score: 0.964
+test-set roc_auc score: 0.959
+```
 #### 6.2 Results
 <table>
   <tr>
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
   </tr>
   <tr>
-    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+    <td>Logistic Regression</td> <td>0.956</td> <td>0.953</td>
   </tr>
   <tr>
-    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+    <td>K-NN</td> <td>0.971</td> <td>0.973</td>
   </tr>
   <tr>
-    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+    <td>SVM</td> <td>0.956</td> <td>0.957</td>
   </tr>
   <tr>
-    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+    <td>Kernel SVM</td> <td>0.964</td> <td>0.967</td>
   </tr>
   <tr>
-    <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
+    <td>Naive Bayer</td> <td>0.949</td> <td>0.960</td>
   </tr>
   <tr>
-    <td>Decision Tree</td> <td>0.952424</td> <td>0.946226</td>
+    <td>Decision Tree</td> <td>0.964</td> <td>0.959</td>
   </tr>
 </table>
 
@@ -337,42 +362,49 @@ df.loc[5] = ['Decision Tree', accuracies.mean(), auc.mean()]
 ```
 from sklearn.ensemble import RandomForestClassifier
 
-#Classifier
-classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
+param_grid = {'n_estimators': np.arange(10, 110, 5),
+              'criterion': ['entropy', 'gini'],
+             }
+classifier = GridSearchCV(RandomForestClassifier(), param_grid=param_grid, cv=10, scoring='roc_auc')
+classifier.fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
 
-#Accuracy
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
-
-#ROC_AUC
-auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
-df.loc[6] = ['Random Forest', accuracies.mean(), auc.mean()]
+print("best cross-validation score: {:.3f}".format(classifier.best_score_))
+print("best parameters:", classifier.best_params_)
+print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
+print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
 ```
-
+```
+best cross-validation score: 0.993
+best parameters: {'criterion': 'entropy', 'n_estimators': 60}
+test-set accuracy score: 0.971
+test-set roc_auc score: 0.973
+```
 #### 7.2 Results
 <table>
   <tr>
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
   </tr>
   <tr>
-    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+    <td>Logistic Regression</td> <td>0.956</td> <td>0.953</td>
   </tr>
   <tr>
-    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+    <td>K-NN</td> <td>0.971</td> <td>0.973</td>
   </tr>
   <tr>
-    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+    <td>SVM</td> <td>0.956</td> <td>0.957</td>
   </tr>
   <tr>
-    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+    <td>Kernel SVM</td> <td>0.964</td> <td>0.967</td>
   </tr>
   <tr>
-    <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
+    <td>Naive Bayer</td> <td>0.949</td> <td>0.960</td>
   </tr>
   <tr>
-    <td>Decision Tree</td> <td>0.952424</td> <td>0.946226</td>
+    <td>Decision Tree</td> <td>0.964</td> <td>0.959</td>
   </tr>
   <tr>
-    <td>Random Forest</td> <td>0.961515</td> <td>0.984498</td>
+    <td>Random Forest</td> <td>0.971</td> <td>0.973</td>
   </tr>
 </table>
 
@@ -381,52 +413,59 @@ df.loc[6] = ['Random Forest', accuracies.mean(), auc.mean()]
 ```
 from xgboost import XGBClassifier
 
-#Classifier
-classifier = XGBClassifier()
+param_grid = {'booster': ['gbtree', 'gblinear', 'dart'],
+             }
+classifier = GridSearchCV(XGBClassifier(), param_grid=param_grid, cv=10, scoring='roc_auc')
+classifier.fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
 
-#Accuracy
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
-
-#ROC_AUC
-auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
-df.loc[7] = ['XGBoost', accuracies.mean(), auc.mean()]
+print("best cross-validation score: {:.3f}".format(classifier.best_score_))
+print("best parameters:", classifier.best_params_)
+print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
+print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
 ```
-
+```
+best cross-validation score: 0.996
+best parameters: {'booster': 'gblinear'}
+test-set accuracy score: 0.934
+test-set roc_auc score: 0.923
+```
 #### 8.2 Results
 <table>
   <tr>
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
   </tr>
   <tr>
-    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+    <td>Logistic Regression</td> <td>0.956</td> <td>0.953</td>
   </tr>
   <tr>
-    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+    <td>K-NN</td> <td>0.971</td> <td>0.973</td>
   </tr>
   <tr>
-    <td>SVM</td> <td>0.970707</td> <td>0.994927</td>
+    <td>SVM</td> <td>0.956</td> <td>0.957</td>
   </tr>
   <tr>
-    <td>Kernel SVM</td> <td>0.965253</td> <td>0.989058</td>
+    <td>Kernel SVM</td> <td>0.964</td> <td>0.967</td>
   </tr>
   <tr>
-    <td>Naive Bayer</td> <td>0.961582</td> <td>0.981354</td>
+    <td>Naive Bayer</td> <td>0.949</td> <td>0.960</td>
   </tr>
   <tr>
-    <td>Decision Tree</td> <td>0.952424</td> <td>0.946226</td>
+    <td>Decision Tree</td> <td>0.964</td> <td>0.959</td>
   </tr>
   <tr>
-    <td>Random Forest</td> <td>0.961515</td> <td>0.984498</td>
+    <td>Random Forest</td> <td>0.971</td> <td>0.973</td>
   </tr>
   <tr>
-    <td>XGBoost</td> <td>0.965253</td> <td>0.991410</td>
+    <td>XGBoost</td> <td>0.934</td> <td>0.923</td>
   </tr>
 </table>
 
 ## IV. Compare and Apply
 ### 1. Compare models, choose the final model
-We will choose the final model only based on the cross-validated AUC score. The Logistic Regression model had the highest AUC score of 99.54%, so Logistic Regression model is the final model.
+We will choose the final model based on the AUC score. The K-NN model and Random Forest model had the highest AUC score of 97.3%.
 
+<!--
 ### 2. Hyperparameter Optimization
 After we chose the Logistic Regression classifier as the final model to implement on our binary classification problem, we wished to optimize its performance. We implemented hyperparameter optimization by using grid search to find parameters to improve the performance of the Logistic Regression classifier.
 
@@ -478,6 +517,7 @@ Area under curve: 99.45 %
 ### 4. Conclusion
 
 After optimizing, the AUC score for the Logistic Regression classifier improved slightly from 99.54% to 99.60% on the training set. The AUC score on the test set was 99.45%.
+-->
 
 References:
 
