@@ -463,7 +463,7 @@ test-set roc_auc score: 0.923
 
 ## IV. Compare and Apply
 ### 1. Compare models, choose the final model
-We will choose the final model based on the AUC score. The K-NN model and Random Forest model had the highest AUC score of 97.3%.
+We will choose the final model based on the AUC score. The K-NN model and Random Forest model had the highest AUC score of 0.973.
 
 <!--
 ### 2. Hyperparameter Optimization
