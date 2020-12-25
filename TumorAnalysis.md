@@ -51,16 +51,47 @@ import pandas as pd
 ### 2. Importing the dataset
 ```
 dataset = pd.read_csv('Data.csv')
-X = dataset.iloc[:, :-1].values
+X = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
+dataset.info()
+```
+```
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 683 entries, 0 to 682
+Data columns (total 11 columns):
+ #   Column                       Non-Null Count  Dtype
+---  ------                       --------------  -----
+ 0   Sample code number           683 non-null    int64
+ 1   Clump Thickness              683 non-null    int64
+ 2   Uniformity of Cell Size      683 non-null    int64
+ 3   Uniformity of Cell Shape     683 non-null    int64
+ 4   Marginal Adhesion            683 non-null    int64
+ 5   Single Epithelial Cell Size  683 non-null    int64
+ 6   Bare Nuclei                  683 non-null    int64
+ 7   Bland Chromatin              683 non-null    int64
+ 8   Normal Nucleoli              683 non-null    int64
+ 9   Mitoses                      683 non-null    int64
+ 10  Class                        683 non-null    int64
+dtypes: int64(11)
+memory usage: 58.8 KB
+```
+```
+print(X[:5])
+```
+```
+[[ 5  1  1  1  2  1  3  1  1]
+ [ 5  4  4  5  7 10  3  2  1]
+ [ 3  1  1  1  2  2  3  1  1]
+ [ 6  8  8  1  3  4  3  7  1]
+ [ 4  1  1  3  2  1  3  1  1]]
 ```
 
 ### 3. Splitting the dataset into the Training set and Test set
 ```
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 ```
-
+<!--
 ### 4. Feature Scaling
 ```
 from sklearn.preprocessing import StandardScaler
@@ -68,34 +99,45 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 ```
-<!--
+
 ### 5. View data
 ```
 ```
 -->
-### 5. Define a Dataframe
+### 4. Define a Dataframe
 ```
 df = pd.DataFrame(columns=['Classifier', 'CV_Accuracy', 'CV_AUC'], dtype=float)
 ```
 
 ## III. Build predicting model
+```
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import confusion_matrix, accuracy_score
+```
 
 ### 1. Logistic Regression
 
 #### 1.1 Training the Logistic Regression model using k-fold cross-validation
 ```
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import cross_val_score
 
-#Classifier
-classifier = LogisticRegression(random_state = 0)
+param_grid = {'penalty': ['l1', 'l2', 'elasticnet', 'none'], 
+              }
+classifier = GridSearchCV(LogisticRegression(), param_grid=param_grid, cv=10, scoring='roc_auc')
+classifier.fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
 
-#Accuracy
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
-
-#ROC_AUC
-auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
-df.loc[0] = ['Logistic Regression', accuracies.mean(), auc.mean()]
+print("best cross-validation score: {:.3f}".format(classifier.best_score_))
+print("best parameters:", classifier.best_params_)
+print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
+print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
+```
+```
+best cross-validation score: 0.996
+best parameters: {'penalty': 'l2'}
+test-set accuracy score: 0.956
+test-set roc_auc score: 0.953
 ```
 #### 1.2 Results
 <table>
@@ -103,7 +145,7 @@ df.loc[0] = ['Logistic Regression', accuracies.mean(), auc.mean()]
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
   </tr>
   <tr>
-    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+    <td>Logistic Regression</td> <td>0.956</td> <td>0.953</td>
   </tr>
 </table>
 
@@ -112,15 +154,22 @@ df.loc[0] = ['Logistic Regression', accuracies.mean(), auc.mean()]
 ```
 from sklearn.neighbors import KNeighborsClassifier
 
-#Classifier
-classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
+param_grid = {'n_neighbors':  np.arange(1, 15, 1),
+             }
+classifier = GridSearchCV(KNeighborsClassifier(), param_grid=param_grid, cv=10, scoring='roc_auc')
+classifier.fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
 
-#Accuracy
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='accuracy')
-
-#ROC_AUC
-auc = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10, scoring='roc_auc')
-df.loc[1] = ['K-NN', accuracies.mean(), auc.mean()]
+print("best cross-validation score: {:.3f}".format(classifier.best_score_))
+print("best parameters:", classifier.best_params_)
+print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
+print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
+```
+```
+best cross-validation score: 0.992
+best parameters: {'n_neighbors': 5}
+test-set accuracy score: 0.971
+test-set roc_auc score: 0.973
 ```
 #### 2.2 Results
 <table>
@@ -128,10 +177,10 @@ df.loc[1] = ['K-NN', accuracies.mean(), auc.mean()]
     <th>Classifier</th> <th>CV_Accuracy</th> <th>CV_AUC</th>
   </tr>
   <tr>
-    <td>Logistic Regression</td> <td>0.967003</td> <td>0.995386</td>
+    <td>Logistic Regression</td> <td>0.956</td> <td>0.953</td>
   </tr>
   <tr>
-    <td>K-NN</td> <td>0.967003</td> <td>0.981935</td>
+    <td>K-NN</td> <td>0.971</td> <td>0.973</td>
   </tr>
 </table>
 
