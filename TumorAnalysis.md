@@ -155,6 +155,9 @@ test-set roc_auc score: 0.953
 from sklearn.neighbors import KNeighborsClassifier
 
 param_grid = {'n_neighbors':  np.arange(1, 15, 1),
+              'weights': ['uniform', 'distance'],
+              'algorithm': ['auto', 'ball_tree', 'kd_tree', 'brute'],
+              'leaf_size': np.arange(20, 50, 2),
              }
 classifier = GridSearchCV(KNeighborsClassifier(), param_grid=param_grid, cv=10, scoring='roc_auc')
 classifier.fit(X_train, y_train)
@@ -167,7 +170,7 @@ print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
 ```
 ```
 best cross-validation score: 0.992
-best parameters: {'n_neighbors': 5}
+best parameters: {'algorithm': 'auto', 'leaf_size': 32, 'n_neighbors': 5, 'weights': 'uniform'}
 test-set accuracy score: 0.971
 test-set roc_auc score: 0.973
 ```
@@ -362,8 +365,12 @@ test-set roc_auc score: 0.959
 ```
 from sklearn.ensemble import RandomForestClassifier
 
-param_grid = {'n_estimators': np.arange(10, 110, 5),
+param_grid = {'n_estimators': np.arange(50, 60, 2),
               'criterion': ['entropy', 'gini'],
+              'max_depth': np.arange(10, 20, 5),
+              'max_features': ['auto', 'sqrt', 'log2'],
+              'class_weight': ['balanced', 'balanced_subsample'],
+              'random_state': [0],
              }
 classifier = GridSearchCV(RandomForestClassifier(), param_grid=param_grid, cv=10, scoring='roc_auc')
 classifier.fit(X_train, y_train)
@@ -375,8 +382,8 @@ print("test-set accuracy score: {:.3f}".format(accuracy_score(y_test, y_pred)))
 print("test-set roc_auc score: {:.3f}".format(roc_auc_score(y_test, y_pred)))
 ```
 ```
-best cross-validation score: 0.993
-best parameters: {'criterion': 'entropy', 'n_estimators': 60}
+best cross-validation score: 0.991
+best parameters: {'class_weight': 'balanced_subsample', 'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'n_estimators': 52, 'random_state': 0}
 test-set accuracy score: 0.971
 test-set roc_auc score: 0.973
 ```
