@@ -499,7 +499,22 @@ classifier = LogisticRegression(C=0.6, class_weight=None, dual=False, fit_interc
                    warm_start=False)
 classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
-
+```
+```
+print("y_test:\n", y_test)
+print("y_pred:\n", y_pred)
+```
+```
+y_test:
+ [2 2 4 4 2 2 2 4 2 2 4 2 4 2 2 2 4 4 4 2 2 2 4 2 4 4 2 2 2 4 2 4 4 2 2 2 4
+ 4 2 4 2 2 2 2 2 2 2 4 2 2 4 2 4 2 2 2 4 2 2 4 2 2 2 2 2 2 2 2 4 4 2 2 2 2
+ 2 2 4 2 2 2 4 2 4 2 2 4 2 2 4 2 4 2 4 4 4 2 4 4 4 2 2 2 4]
+y_pred:
+ [2 2 4 4 2 2 2 4 2 2 4 2 4 2 2 2 4 4 4 2 2 2 4 2 4 4 2 2 2 4 2 4 4 2 2 2 4
+ 4 2 4 2 2 2 2 2 2 2 4 2 2 4 2 4 2 2 2 4 4 2 4 2 2 2 2 2 2 2 2 4 4 2 2 2 2
+ 2 2 4 2 2 2 4 2 4 2 2 4 2 4 4 2 4 2 4 4 2 4 4 4 4 2 2 2 4]
+```
+```
 auc = roc_auc_score(y_test, y_pred)
 print("test-set auc score: {:.6f}".format(auc))
 ```
