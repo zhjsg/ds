@@ -590,6 +590,9 @@ References:
 
 1. Predictive Models of Student College Commitment Decisions Using Machine Learning. [https://www.mdpi.com/2306-5729/4/2/65/htm](https://www.mdpi.com/2306-5729/4/2/65/htm)
 2. UCI Machine Learning Repository. [https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
-
+3. Cross-Validation. [https://www.textbook.ds100.org/ch/15/bias_cv.html](https://www.textbook.ds100.org/ch/15/bias_cv.html)
+4. Efficiently searching for optimal tuning parameters. [https://github.com/justmarkham/scikit-learn-videos/blob/master/08_grid_search.ipynb](https://github.com/justmarkham/scikit-learn-videos/blob/master/08_grid_search.ipynb)
+5. Cross Validation and Grid Search. [https://amueller.github.io/ml-training-intro/slides/03-cross-validation-grid-search.html#1](https://amueller.github.io/ml-training-intro/slides/03-cross-validation-grid-search.html#1)
+6. roc_auc_score method and auc method. [https://stackoverflow.com/questions/31159157/different-result-with-roc-auc-score-and-auc](https://stackoverflow.com/questions/31159157/different-result-with-roc-auc-score-and-auc)
 * * *
 [BACK](./)
