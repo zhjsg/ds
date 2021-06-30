@@ -5,9 +5,10 @@ layout: default
 [CAP Best Practice](./CAPBestPractice.html)
 ![logo-cap](./images/logo/logo-cap.png)
 https://github.com/zhjsg/ds/blob/master/EDA%20of%20used%20cars.ipynb
+https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/EDA%20of%20used%20cars.ipynb
 -->
 * * *
-[EDA of used cars](https://github.com/zhjsg/ds/blob/master/EDA%20of%20used%20cars.ipynb)
+[EDA of used cars](https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/EDA%20of%20used%20cars.ipynb)
 
 * * *
 [PM2.5 Analysis](./PM25Analysis.html)
