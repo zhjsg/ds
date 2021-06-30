@@ -13,15 +13,15 @@ https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/EDA%20of%20used%20cars.
 * * *
 [PM2.5 Analysis](./PM25Analysis.html)
 
-![pm25](./images/logo/logo-PM25.png)
+<!--![pm25](./images/logo/logo-PM25.png)-->
 * * *
 [Tumor Analysis](./TumorAnalysis.html)
 
-![tumor](./images/logo/logo-tumor.png)
+<!--![tumor](./images/logo/logo-tumor.png)-->
 * * *
 [Employee Attrition Prediction](./EmployeeAnalysis.html)
 
-![employee](./images/logo/logo-employee.png)
+<!--![employee](./images/logo/logo-employee.png)-->
 * * *
 
 <!--
