@@ -15,15 +15,15 @@ https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/EDA%20of%20used%20cars.
 [EDA of used cars](https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/EDA%20of%20used%20cars.ipynb?flush_cache=true)
 
 * * *
-[PM2.5 Analysis](./PM25Analysis.html)
+[PM2.5 prediction](./PM25Analysis.html)
 
 <!--![pm25](./images/logo/logo-PM25.png)-->
 * * *
-[Tumor Analysis](./TumorAnalysis.html)
+[Tumor classification](./TumorAnalysis.html)
 
 <!--![tumor](./images/logo/logo-tumor.png)-->
 * * *
-[Employee Attrition Prediction](./EmployeeAnalysis.html)
+[Employee attrition prediction](./EmployeeAnalysis.html)
 
 <!--![employee](./images/logo/logo-employee.png)-->
 * * *
