@@ -9,6 +9,9 @@ https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/EDA%20of%20used%20cars.
 https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/EDA%20of%20used%20cars.ipynb?flush_cache=true
 -->
 * * *
+[MNIST handwritten digit classification (CNN)](https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/MNIST%20handwritten%20digit%20classification%20(CNN).ipynb?flush_cache=true)
+
+* * *
 [EDA of used cars](https://nbviewer.jupyter.org/github/zhjsg/ds/blob/master/EDA%20of%20used%20cars.ipynb?flush_cache=true)
 
 * * *
